@@ -1,0 +1,150 @@
+{
+  "status": "Firmware source generated at user request; desktop validation passed; ESP32 compilation and hardware validation pending",
+  "retained_requirements": [
+    "Display color tuning and test patterns",
+    "Scrolling long text",
+    "Display brightness control"
+  ],
+  "selected_themes": [
+    {
+      "id": "neon-fishbone-preview.html:0",
+      "file": "neon-fishbone-preview.html",
+      "label": "Neon Fishbone",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "sakura-tape-preview.html:0",
+      "file": "sakura-tape-preview.html",
+      "label": "Sakura Tape",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "sunvair-flight-preview.html:0",
+      "file": "sunvair-flight-preview.html",
+      "label": "Sunvair Flight",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "nasa-worm-preview.html:0",
+      "file": "nasa-worm-preview.html",
+      "label": "NASA Worm",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "card-battle-light-preview.html:0",
+      "file": "card-battle-light-preview.html",
+      "label": "Card Battle · Light",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "lunar-courier-preview.html:0",
+      "file": "lunar-courier-preview.html",
+      "label": "Lunar Courier",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "tidal-station-preview.html:0",
+      "file": "tidal-station-preview.html",
+      "label": "Tidal Station",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "amber-workshop-preview.html:0",
+      "file": "amber-workshop-preview.html",
+      "label": "Amber Workshop",
+      "index": 0,
+      "family": "Recent light themes"
+    },
+    {
+      "id": "iron-circuit-preview.html:0",
+      "file": "iron-circuit-preview.html",
+      "label": "Iron Circuit · Dark",
+      "index": 0,
+      "family": "Pixel explorations"
+    },
+    {
+      "id": "pixel-game-directions.html:1",
+      "file": "pixel-game-directions.html",
+      "label": "Melody Machine",
+      "index": 1,
+      "family": "Pixel explorations"
+    },
+    {
+      "id": "pixel-game-directions.html:2",
+      "file": "pixel-game-directions.html",
+      "label": "Pocket OS",
+      "index": 2,
+      "family": "Pixel explorations"
+    },
+    {
+      "id": "pixel-scene-directions.html:1",
+      "file": "pixel-scene-directions.html",
+      "label": "Dungeon Deck · Early pixel scenes",
+      "index": 1,
+      "family": "Pixel explorations"
+    },
+    {
+      "id": "pixel-scene-directions.html:2",
+      "file": "pixel-scene-directions.html",
+      "label": "Amber Navigator · Early pixel scenes",
+      "index": 2,
+      "family": "Pixel explorations"
+    },
+    {
+      "id": "strand-midnight.html:0",
+      "file": "strand-midnight.html",
+      "label": "Signal Report · Black",
+      "index": 0,
+      "family": "Technical themes"
+    },
+    {
+      "id": "strand-midnight.html:1",
+      "file": "strand-midnight.html",
+      "label": "Tape Session · Black",
+      "index": 1,
+      "family": "Technical themes"
+    },
+    {
+      "id": "strand-instruments.html:0",
+      "file": "strand-instruments.html",
+      "label": "Signal Report · Light",
+      "index": 0,
+      "family": "Technical themes"
+    },
+    {
+      "id": "minimal-transport.html:0",
+      "file": "minimal-transport.html",
+      "label": "Arc Transport",
+      "index": 0,
+      "family": "Technical themes"
+    },
+    {
+      "id": "minimal-transport.html:1",
+      "file": "minimal-transport.html",
+      "label": "Chrono Deck",
+      "index": 1,
+      "family": "Technical themes"
+    },
+    {
+      "id": "player-design-directions.html:0",
+      "file": "player-design-directions.html",
+      "label": "Phosphor Deck · First concepts",
+      "index": 0,
+      "family": "Earlier explorations"
+    },
+    {
+      "id": "player-themes-mockup.html:2",
+      "file": "player-themes-mockup.html",
+      "label": "Retro Desktop · Early theme set",
+      "index": 2,
+      "family": "Earlier explorations"
+    }
+  ]
+}

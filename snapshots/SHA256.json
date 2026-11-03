@@ -39,6 +39,142 @@
     "sha256": "8437f3fc1d4d8ab2269a1624f5380a08df1967a048f8887789bae6e25db7db79",
     "source": "CyberPlayerPCM5102A/CyberPlayer/vendor/minimp3_ex.h"
   },
+  "firmware/StrandPlayer20/App.cpp": {
+    "sha256": "c42d354cd20ff842a093bff8f66efa7c7e893980b6735e0c3d9084be6964f683",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/App.cpp"
+  },
+  "firmware/StrandPlayer20/assets/amber-workshop.inc": {
+    "sha256": "e134997723f025609ab2b655ed2d43ae83204a7e62beb76c1926a13efc005316",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/amber-workshop.inc"
+  },
+  "firmware/StrandPlayer20/assets/card-battle-light.inc": {
+    "sha256": "24dfe6c512c576c55571d5954b8331445ee3ae446acdbbe96e7f5286b2d80664",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/card-battle-light.inc"
+  },
+  "firmware/StrandPlayer20/assets/iron-circuit.inc": {
+    "sha256": "7d2b507e72ee54638d60421efe0fdf6f376a5db8829a10725e533e185136ad9c",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/iron-circuit.inc"
+  },
+  "firmware/StrandPlayer20/assets/lunar-courier.inc": {
+    "sha256": "959fb20336829dd611aea2a75fa903a70fcaf03239787eea4ae643e9fc084e0d",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/lunar-courier.inc"
+  },
+  "firmware/StrandPlayer20/assets/nasa-worm.inc": {
+    "sha256": "f84552ce88494c1a40d9eea780df742210b782e285ab5388671320ec4f824be2",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/nasa-worm.inc"
+  },
+  "firmware/StrandPlayer20/assets/neon-fishbone.inc": {
+    "sha256": "c70047b09380e98baf4e280c5cb2b9f22f2bae11c1faf90894959989b190832c",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/neon-fishbone.inc"
+  },
+  "firmware/StrandPlayer20/assets/sakura-tape.inc": {
+    "sha256": "e67e7571af8eedeb9456d91998de3fa975bc1df312a239ca9d495db6c6b016f3",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/sakura-tape.inc"
+  },
+  "firmware/StrandPlayer20/assets/sunvair-flight.inc": {
+    "sha256": "10d5a2ebaee33dc0999d2523fad9a5a6a8fb475d64b07baa8bf6dda2414b8a02",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/sunvair-flight.inc"
+  },
+  "firmware/StrandPlayer20/assets/tidal-station.inc": {
+    "sha256": "df8d224442da94199743094cf0a908c673702fa425ffa865e6735b5fe7a2f4c9",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/assets/tidal-station.inc"
+  },
+  "firmware/StrandPlayer20/Config.h": {
+    "sha256": "cb31a2c412f5201ce623c758b678764e385d97357102e7b1a469d706b4df8033",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Config.h"
+  },
+  "firmware/StrandPlayer20/Decoder.cpp": {
+    "sha256": "2463e05e6f766487038d5aaa6a5097ac2e0414c918947cf94c60656a8fe74772",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Decoder.cpp"
+  },
+  "firmware/StrandPlayer20/Decoder.h": {
+    "sha256": "7853d03685a24c445e2033d0f3dbcd4028bc7c6f3b245f49d0695a485e1dc410",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Decoder.h"
+  },
+  "firmware/StrandPlayer20/DisplayCalibration.cpp": {
+    "sha256": "53e83d0f88f15db126fa015e11d5032ae2afeaeefeeaedd4164a24870e2f32af",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/DisplayCalibration.cpp"
+  },
+  "firmware/StrandPlayer20/DisplayCalibration.h": {
+    "sha256": "4cf588f9c0aab6e9ad8593bd26a99455a82125c95c6e94dd7a3c4687ca6c7895",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/DisplayCalibration.h"
+  },
+  "firmware/StrandPlayer20/Media.cpp": {
+    "sha256": "c34cdef6d2e4e46d301d0be548774a54707b1ba32f92a12c7d0f7d44e62ad5b0",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Media.cpp"
+  },
+  "firmware/StrandPlayer20/Media.h": {
+    "sha256": "843edde8c2f2a82d4251d9722a24c536994bd5f66164e29c5dc712a7eb5876a2",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Media.h"
+  },
+  "firmware/StrandPlayer20/PcmScope.h": {
+    "sha256": "c10d26a80a3aca0876a15357795106c639afc3fd17c90c1d7e6a035cd40e5359",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/PcmScope.h"
+  },
+  "firmware/StrandPlayer20/PixelFont.h": {
+    "sha256": "7c1c68249b85fbc13a2e33f0a7ae9e53f4a3355be0d78a1c5713802de71cc4e1",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/PixelFont.h"
+  },
+  "firmware/StrandPlayer20/README.md": {
+    "sha256": "672ffb86feda73063d75a6ccad6a8cd96b2d32c062aaddd88ea84d206b0599b6",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/README.md"
+  },
+  "firmware/StrandPlayer20/SELECTED-THEMES.json": {
+    "sha256": "f509bc937d2b860b96ce22eb6854b9165b6eb9e99707c81caac2c57e3d253b14",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/SELECTED-THEMES.json"
+  },
+  "firmware/StrandPlayer20/SelectedThemes.inc": {
+    "sha256": "1beb393905b15975d6f8174745b8d2d9999c74f928477bd2c71985e67619975a",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/SelectedThemes.inc"
+  },
+  "firmware/StrandPlayer20/StrandBody.inc": {
+    "sha256": "e6405f6c5a3605917183badca4c3ea2ece53bcfd1f94afd4c4ccd4fc495eb9b8",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandBody.inc"
+  },
+  "firmware/StrandPlayer20/StrandClock.inc": {
+    "sha256": "aab99dd6500d43a5d1bbf746029c4afc5604aa82af28abe44ceca922763fcf2b",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandClock.inc"
+  },
+  "firmware/StrandPlayer20/StrandFonts.h": {
+    "sha256": "3d95cba792053873e38f34e9608bd4d4b3ad5b83bde150fa3c23f129e793972f",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandFonts.h"
+  },
+  "firmware/StrandPlayer20/StrandPlayer20.ino": {
+    "sha256": "d4fa7de532190be3ff2657340db62a9caf9482af41fbe87493a68befdf4fcfb2",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandPlayer20.ino"
+  },
+  "firmware/StrandPlayer20/StrandSmall.inc": {
+    "sha256": "a42453aa737b337010d127b6baafd75979f61579030022d1acc9f0b837996d8e",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandSmall.inc"
+  },
+  "firmware/StrandPlayer20/StrandTitle.inc": {
+    "sha256": "43f613200f767e191bdc3a8deb0cf248b8a040fe886a598202715a8801314f45",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/StrandTitle.inc"
+  },
+  "firmware/StrandPlayer20/ThemeArt.h": {
+    "sha256": "d16d148d0265b1803dd8e7e706975d96428c14ce8c9277a7223445916129a4eb",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/ThemeArt.h"
+  },
+  "firmware/StrandPlayer20/ThemeMenus.inc": {
+    "sha256": "1e6e5b36599064d77bac7d7acd18f074f992bf3efa5f82c76ef645bd611ab1b6",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/ThemeMenus.inc"
+  },
+  "firmware/StrandPlayer20/Themes.cpp": {
+    "sha256": "4d7f1797106358dbde48f996a479a0b26d88d53867a89e40c798fc0b6de9756e",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Themes.cpp"
+  },
+  "firmware/StrandPlayer20/Themes.h": {
+    "sha256": "bed7372c0f976f1218b54d55cd372236e07b8383664e062b4a7984d6addf828a",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/Themes.h"
+  },
+  "firmware/StrandPlayer20/vendor/minimp3.h": {
+    "sha256": "57e437c5c1f0e8b243885d3929c8973b5e6c778451e0100ab4251d19915cb3ad",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/vendor/minimp3.h"
+  },
+  "firmware/StrandPlayer20/vendor/minimp3_ex.h": {
+    "sha256": "8437f3fc1d4d8ab2269a1624f5380a08df1967a048f8887789bae6e25db7db79",
+    "source": "STRAND-20-Themes-Firmware-v3/StrandPlayer20/vendor/minimp3_ex.h"
+  },
   "diagnostics/PCM5102ToneTest/PCM5102ToneTest.ino": {
     "sha256": "46eb346cfd38859f37f269e7b33eedb25732244c4a7b7099d2a297b1c70c2ae8",
     "source": "CyberPlayerPCM5102A/PCM5102ToneTest/PCM5102ToneTest.ino"
@@ -530,5 +666,373 @@
   "firmware/PCM5102-WIRING.md": {
     "sha256": "c16f0bee6e7e7e6260e979482fa54cf8ae09f2d5a5333a84e455cc3859deb5b1",
     "source": "CyberPlayerPCM5102A/PCM5102-WIRING.md"
+  },
+  "docs/archive/STRAND20-README.md": {
+    "sha256": "672ffb86feda73063d75a6ccad6a8cd96b2d32c062aaddd88ea84d206b0599b6",
+    "source": "STRAND-20-Themes-Firmware-v3/STRAND20-README.md"
+  },
+  "docs/archive/STRAND20-TEST-REPORT.md": {
+    "sha256": "68c7a0f752fc04d5f92ffdc03f71f479e825cb6e190f19532ded6f808a3e1c9d",
+    "source": "STRAND-20-Themes-Firmware-v3/STRAND20-TEST-REPORT.md"
+  },
+  "docs/previews/now-playing/01-Neon-Fishbone.png": {
+    "sha256": "0efce3d6ed3310c5fc75400f6cfcc2750d379b756b033c5e59858687ada60d07",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/01-Neon-Fishbone.png"
+  },
+  "docs/previews/now-playing/02-Sakura-Tape.png": {
+    "sha256": "e73d38b6f807fe3e821b897c089671a0992d7477f1371a1b2f67d11bd6526a04",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/02-Sakura-Tape.png"
+  },
+  "docs/previews/now-playing/03-Sunvair-Flight.png": {
+    "sha256": "c1553ce88c3d966bfee80ed2f6d967bd22f8a2c71a2f1a45997247e2eb1b68ac",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/03-Sunvair-Flight.png"
+  },
+  "docs/previews/now-playing/04-NASA-Worm.png": {
+    "sha256": "830a968950b37993212262f6534cc38250170f460db4873effce5133ce897ac8",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/04-NASA-Worm.png"
+  },
+  "docs/previews/now-playing/05-Card-Battle.png": {
+    "sha256": "9db031ad77c48c29881c0cc038ee1f37def6e052ce0e03d5d1333c8adffc3fc4",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/05-Card-Battle.png"
+  },
+  "docs/previews/now-playing/06-Lunar-Courier.png": {
+    "sha256": "4aae609e7679773391ec77d92cbb0363dce20094bca59aa3e6f39703e194d467",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/06-Lunar-Courier.png"
+  },
+  "docs/previews/now-playing/07-Tidal-Station.png": {
+    "sha256": "a4c43a0cf05d51153244b23acd2dafe10e8b09743c0632e8a3d2330fc0318379",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/07-Tidal-Station.png"
+  },
+  "docs/previews/now-playing/08-Amber-Workshop.png": {
+    "sha256": "727b5859a7a59ccc2895b1cd5eac3fdb392770ebaab5cf71ccb6d57f5a6d9feb",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/08-Amber-Workshop.png"
+  },
+  "docs/previews/now-playing/09-Iron-Circuit.png": {
+    "sha256": "fd5dde1629339099557972b788110e856a153d649f5227cc1278fb86269dcf36",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/09-Iron-Circuit.png"
+  },
+  "docs/previews/now-playing/10-Melody-Machine.png": {
+    "sha256": "dd589226697dd7f752e1d0d7227047f749229f9f8919ff83c6ac699eeadb74c7",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/10-Melody-Machine.png"
+  },
+  "docs/previews/now-playing/11-Pocket-OS.png": {
+    "sha256": "a7de1b1e28cf8c432c75951c502caa7b91a75e2829fddc103855c7e73754470a",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/11-Pocket-OS.png"
+  },
+  "docs/previews/now-playing/12-Dungeon-Deck.png": {
+    "sha256": "675a68c41af2c1f0f9516153f5215e9867ca9a46aa43d62a0d53581073b6090a",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/12-Dungeon-Deck.png"
+  },
+  "docs/previews/now-playing/13-Amber-Navigator.png": {
+    "sha256": "80527a34ba74d3513da8948b4d52cba06fc02e167e0b48b7201c41c0b1f71df9",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/13-Amber-Navigator.png"
+  },
+  "docs/previews/now-playing/14-Signal-Report-Black.png": {
+    "sha256": "a8b1ad295ca37736773b0342f86d4bb6802a8617397a7e10ef1404b328bd8cf1",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/14-Signal-Report-Black.png"
+  },
+  "docs/previews/now-playing/15-Tape-Session.png": {
+    "sha256": "9e750195a3bd6bac70edb41f037936f98808ed9a344c616c170838cbc42c9b3b",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/15-Tape-Session.png"
+  },
+  "docs/previews/now-playing/16-Signal-Report-Light.png": {
+    "sha256": "87660f0da45dccac1567771a95b32d872d4bdc7f9c6cfcf158bf1f0a29af70d2",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/16-Signal-Report-Light.png"
+  },
+  "docs/previews/now-playing/17-Arc-Transport.png": {
+    "sha256": "c36b60a6d43d256e01a722d2cd07a7386ed40d7b0fad314d078eebd6fb1efd1b",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/17-Arc-Transport.png"
+  },
+  "docs/previews/now-playing/18-Chrono-Deck.png": {
+    "sha256": "39eaf0dea1931debec50235bda72cb09aaf458a649c7437b6544f22f44f3ab22",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/18-Chrono-Deck.png"
+  },
+  "docs/previews/now-playing/19-Phosphor-Deck.png": {
+    "sha256": "2559813e1c3475a55138e02764a987dbf0bd837142ee4991803210a8d8819df6",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/19-Phosphor-Deck.png"
+  },
+  "docs/previews/now-playing/20-Retro-Desktop.png": {
+    "sha256": "9b38c3b499a346d5a0ddd6d4d77936bbd393314c15539efd7d1151ca11c6c826",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/20-Retro-Desktop.png"
+  },
+  "docs/previews/now-playing/review-1.png": {
+    "sha256": "a56bbc917598b2dc0a29d5bb8a396efec3d8871a1002913c93a206e745fc0af9",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/review-1.png"
+  },
+  "docs/previews/now-playing/review-2.png": {
+    "sha256": "70510bf9d07427f0291abaf5fa19542c78dc85d8af3cad159e4707fa0088cafb",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/review-2.png"
+  },
+  "docs/previews/now-playing/review-3.png": {
+    "sha256": "5034ac4d23faef72ba2b2550e49a78e993e3935c3038aa70442810215f299832",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/review-3.png"
+  },
+  "docs/previews/now-playing/review-4.png": {
+    "sha256": "a065043b08c7b60267cfda48c2150160314c7eb83eba7da395db7f618c89d3c0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedPreviews/review-4.png"
+  },
+  "docs/previews/menus/01-brightness.png": {
+    "sha256": "2c372f71dc1c2135859d2fa3557e1591590e5a958fb736ec9d7da55cb39e8daf",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/01-brightness.png"
+  },
+  "docs/previews/menus/01-menu.png": {
+    "sha256": "71143fc9545da0a0653aab06def8d35958da21e596a24d47b75abc96efb18636",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/01-menu.png"
+  },
+  "docs/previews/menus/01-settings.png": {
+    "sha256": "398045aad230a21693a0a477c67afce0e3a1bdc58333edc905a34abaa2eefaae",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/01-settings.png"
+  },
+  "docs/previews/menus/02-brightness.png": {
+    "sha256": "ae0ce95d4a7154e2e798d79c549f7fdfb69553cb4bd0e747fc926b530526ad40",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/02-brightness.png"
+  },
+  "docs/previews/menus/02-menu.png": {
+    "sha256": "ecf375349e8d12b12fce71634222b80fdd322cf3705654f26312bf6dc6c6d4fb",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/02-menu.png"
+  },
+  "docs/previews/menus/02-settings.png": {
+    "sha256": "ce84b6ccc53adbda1d4a6a7782944710eab40e014d170ba4482a2a0280a5be71",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/02-settings.png"
+  },
+  "docs/previews/menus/03-brightness.png": {
+    "sha256": "b993a9586c3f0d399518692323b41b856cbeb36bc4c9f09ef9492f843fe3244f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/03-brightness.png"
+  },
+  "docs/previews/menus/03-menu.png": {
+    "sha256": "055151f6b63370ad1be01adbb64e3df01dd8e94e7b71b35eb5e14884d3b635dc",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/03-menu.png"
+  },
+  "docs/previews/menus/03-settings.png": {
+    "sha256": "5973d8c4036092a491004f13640ec5387ab2e57e39f9e52ec29ab7d6c55c3408",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/03-settings.png"
+  },
+  "docs/previews/menus/04-brightness.png": {
+    "sha256": "28a6c08c307685bf60ea619f81632b7c7c4ef6264f08600d3d07ece0cacaf39f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/04-brightness.png"
+  },
+  "docs/previews/menus/04-menu.png": {
+    "sha256": "141094f345fd3cf45eefeee6c9c7d84901572bab62c18c92fe5aebb60127ef52",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/04-menu.png"
+  },
+  "docs/previews/menus/04-settings.png": {
+    "sha256": "f96eb2bef7b1b05bd1335282a5a666db8eaaef36dd641974dfd9dfc384d3a844",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/04-settings.png"
+  },
+  "docs/previews/menus/05-brightness.png": {
+    "sha256": "c483e1331ddd544a86c1bad09d510a57576c5982fd3f9ec6b421c3572e241b4f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/05-brightness.png"
+  },
+  "docs/previews/menus/05-menu.png": {
+    "sha256": "ad70ceaef263a35d5b5ebac8ce7864eb6dbf7d5dd885710bea16227e501f82b0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/05-menu.png"
+  },
+  "docs/previews/menus/05-settings.png": {
+    "sha256": "27a3913a83ddbf23883f6cab16e96041262899446ada23b9cf57747cd1428ce6",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/05-settings.png"
+  },
+  "docs/previews/menus/06-brightness.png": {
+    "sha256": "62d30bf8c8feb74275c13b3831678438eb4e1a841e23bb5fe4390a7c23830e87",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/06-brightness.png"
+  },
+  "docs/previews/menus/06-menu.png": {
+    "sha256": "da2c985365a729b1cd23b241a303347c015ab2abbb5a3f1c03524dcdad7c9f17",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/06-menu.png"
+  },
+  "docs/previews/menus/06-settings.png": {
+    "sha256": "774eb1c131cdaa8860fb6a80df7d69cf22f9f1c8c35423fb9e853a7085e8c53f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/06-settings.png"
+  },
+  "docs/previews/menus/07-brightness.png": {
+    "sha256": "df9b65b0fc83ab4ce79c56bf76e336853e603219616a01d45041140ac238cc47",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/07-brightness.png"
+  },
+  "docs/previews/menus/07-menu.png": {
+    "sha256": "00a781368aa65405412dc1b2d62d288e3a4e46722655895e7113ef7fd0ebcfa9",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/07-menu.png"
+  },
+  "docs/previews/menus/07-settings.png": {
+    "sha256": "fc87fe5e4e9bfc90fe0d64c1674a2edd8ab98e2ae16f6d86b521ee2ec7e8ca24",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/07-settings.png"
+  },
+  "docs/previews/menus/08-brightness.png": {
+    "sha256": "f65c5876b093401bc5d693a2d62333ca1b7623083c45bc08a3adfbcdfedae149",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/08-brightness.png"
+  },
+  "docs/previews/menus/08-menu.png": {
+    "sha256": "5aa75771a1e0309eec6aaa6e403ff538a1fc0851fa523514fdcdc9a95c004386",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/08-menu.png"
+  },
+  "docs/previews/menus/08-settings.png": {
+    "sha256": "d1c40534b2de02067a28ff3dbecd67595443324c81b7c5d1d4535ab8e36494f5",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/08-settings.png"
+  },
+  "docs/previews/menus/09-brightness.png": {
+    "sha256": "6a0b3886f46c8998db046b71b108013ac65c4a006892fa1c3f2e89ff710256d1",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/09-brightness.png"
+  },
+  "docs/previews/menus/09-menu.png": {
+    "sha256": "3ea8f74b084a42238dcac9c18194b04eeebf23f13bfa54293d3df23683e830fb",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/09-menu.png"
+  },
+  "docs/previews/menus/09-settings.png": {
+    "sha256": "bb051bddc82bf48e777c23bca6e3c5d538e6281618d03c178c67095099816645",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/09-settings.png"
+  },
+  "docs/previews/menus/10-brightness.png": {
+    "sha256": "fd4f18f227abc1a27924c012fbb1bdcc5fd585e142cbc591ad22bc268a0a2bd9",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/10-brightness.png"
+  },
+  "docs/previews/menus/10-menu.png": {
+    "sha256": "1d5b42b3bcd4479590663e50b8dae35a35e7fdc3c4838766f8e634eb09974eb6",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/10-menu.png"
+  },
+  "docs/previews/menus/10-settings.png": {
+    "sha256": "6918f88bee97f050295cabf208d1cbdc77fd6b0df6dfd288a628374e66b03d4b",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/10-settings.png"
+  },
+  "docs/previews/menus/11-brightness.png": {
+    "sha256": "e52a52aaa68904d3136f9894e963c7c6382b8187c219d1f0b9a43b7ee7b03561",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/11-brightness.png"
+  },
+  "docs/previews/menus/11-menu.png": {
+    "sha256": "1e324dcb0c2c508c55aa791b5a5f69127e1439d2db01ff279880c0395713f8a3",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/11-menu.png"
+  },
+  "docs/previews/menus/11-settings.png": {
+    "sha256": "3a95316560b74cdd3262a872abbd52e9eef52caeaf203e3e07f55bd5485ac2d0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/11-settings.png"
+  },
+  "docs/previews/menus/12-brightness.png": {
+    "sha256": "1f5fa7685addb14f6a0c555d6b39ef043bcb3773822671bc60a1bf4807dc8e4f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/12-brightness.png"
+  },
+  "docs/previews/menus/12-menu.png": {
+    "sha256": "9c069ca0db400f9584a70cd1ea77e5e5f8eb554723d86edba5f2c3b4578a256f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/12-menu.png"
+  },
+  "docs/previews/menus/12-settings.png": {
+    "sha256": "88b3f02400256cdf02fb6879c6d18fbd8510e73deb269e4cbbfb76814daa523a",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/12-settings.png"
+  },
+  "docs/previews/menus/13-brightness.png": {
+    "sha256": "ed1b1302d6e9a5182b6a5fbc6c3f5a56133f0ec0a0ac27bf8a8a27620e80062a",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/13-brightness.png"
+  },
+  "docs/previews/menus/13-menu.png": {
+    "sha256": "246c6cc4e5c6f1f859fee4c4cd4cee94f96b90f1f05798e5458ddfcc897834b4",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/13-menu.png"
+  },
+  "docs/previews/menus/13-settings.png": {
+    "sha256": "01244272c3f2b39bf2b1fe891ced48af87bde333fae53914fc6edc9a70f4d774",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/13-settings.png"
+  },
+  "docs/previews/menus/14-brightness.png": {
+    "sha256": "3caaf749c3f8ad761326ad7691a5be464fcac2d92b8f1da74ddc43541ea1110f",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/14-brightness.png"
+  },
+  "docs/previews/menus/14-menu.png": {
+    "sha256": "9142ed6b27212ade15963cfe4501444c0fe39dfca9a006d65419440659f8390b",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/14-menu.png"
+  },
+  "docs/previews/menus/14-settings.png": {
+    "sha256": "4472ba0166a5b7fe2839d2c720cc25c372704064c1a30b076d0bc32529f37ebb",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/14-settings.png"
+  },
+  "docs/previews/menus/15-brightness.png": {
+    "sha256": "9562e3001cfffc467f29746fe4cede2eae9969e7d86c582e582bcb86696cb64e",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/15-brightness.png"
+  },
+  "docs/previews/menus/15-menu.png": {
+    "sha256": "31b9783c8ebaa7ae6ff7c55d310bdb057ecaccd67722e0139a9099b6f9b9ae2e",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/15-menu.png"
+  },
+  "docs/previews/menus/15-settings.png": {
+    "sha256": "a46509a617baf17ac03fd5813f6fd2ef99c1d81d953d29502f83e0d751b80b8d",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/15-settings.png"
+  },
+  "docs/previews/menus/16-brightness.png": {
+    "sha256": "340f8783e0a4846e6f01995cadf8cc34fd7fe3ebbf3e2f7ed2e9522476fd9ddf",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/16-brightness.png"
+  },
+  "docs/previews/menus/16-menu.png": {
+    "sha256": "e08fc4dbf30866fad72fd3d14f280fa46336ce5017293174c7ad89abb51dcf8b",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/16-menu.png"
+  },
+  "docs/previews/menus/16-settings.png": {
+    "sha256": "defda271d0227a53e1d7fabaf13aebb438eb32da2665b8f3b59d40b6277cb16c",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/16-settings.png"
+  },
+  "docs/previews/menus/17-brightness.png": {
+    "sha256": "7c45c8879aec6590a6c86ae39d12d24279f2f9e33eb9d68e78644482fa77bad3",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/17-brightness.png"
+  },
+  "docs/previews/menus/17-menu.png": {
+    "sha256": "8d4f3006b070430e138a2779df558953236baf5752afe2e97ab5aa62842943c1",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/17-menu.png"
+  },
+  "docs/previews/menus/17-settings.png": {
+    "sha256": "5f389a0d4931f1acf71968c3f61983879dfeca883c1220149171647dc4d2cae2",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/17-settings.png"
+  },
+  "docs/previews/menus/18-brightness.png": {
+    "sha256": "d3e98be39b6af432cd0ae6e546f91a01c7e11d8a0ce629f642208326d8d3a8c0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/18-brightness.png"
+  },
+  "docs/previews/menus/18-menu.png": {
+    "sha256": "a6d2bdb61ca4e18579ada8d323a49941ca0a84367f9494c81e6a28da25916f0c",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/18-menu.png"
+  },
+  "docs/previews/menus/18-settings.png": {
+    "sha256": "560e35493263ea434613b515676de2bda265b59283e84b0f9b72b8fa8c13c6a4",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/18-settings.png"
+  },
+  "docs/previews/menus/19-brightness.png": {
+    "sha256": "d60aee433da4dc472b05d31284f8c88efe88e16c29429bd6ce063e8f950e9ff5",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/19-brightness.png"
+  },
+  "docs/previews/menus/19-menu.png": {
+    "sha256": "22b84c6c0e8ffafa4eaa8e5ff0abc5b54dd86d9abfd5b3f4689475da792aa429",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/19-menu.png"
+  },
+  "docs/previews/menus/19-settings.png": {
+    "sha256": "97762cac772fa07bc4bf000aa886426edcae1d2d57eed274e3894d7d01480427",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/19-settings.png"
+  },
+  "docs/previews/menus/20-brightness.png": {
+    "sha256": "44dafc5b21850e13293be95486c5c89685cf642db0d4002ff819a6f4ea7c83a0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/20-brightness.png"
+  },
+  "docs/previews/menus/20-menu.png": {
+    "sha256": "c93d723e234bacd73a2c37a1b75f8f97df928939f1a625375e934e3114164fd0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/20-menu.png"
+  },
+  "docs/previews/menus/20-settings.png": {
+    "sha256": "18351609f5e7fc3c98cf37e671d179ef7c26ee5198a0f2d8310354c0986e267d",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/20-settings.png"
+  },
+  "docs/previews/menus/brightness-1.png": {
+    "sha256": "28c1f74945f99c1d4b7d0dcf32b7f7a472f6f2746a78834b9cb6e084899d2de4",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/brightness-1.png"
+  },
+  "docs/previews/menus/brightness-2.png": {
+    "sha256": "908b20380b06863096f1d12fc2b4a6966a71b7cbaa3d84374c5a563d98cca4b0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/brightness-2.png"
+  },
+  "docs/previews/menus/brightnesss-1.png": {
+    "sha256": "35495ff9ec2fd8cbfee170b6ebeff3d17603f9be303304c7e5fcc077f3a0fafc",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/brightnesss-1.png"
+  },
+  "docs/previews/menus/brightnesss-2.png": {
+    "sha256": "20c0d222abcd0839f7ad46b547bc3489298df49eebd4746b3863ad66e7a04a89",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/brightnesss-2.png"
+  },
+  "docs/previews/menus/menus-1.png": {
+    "sha256": "b6738aaa3414d71615068de59b09d77c7f0c832eaa9ff79979e485e0f4bafdbd",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/menus-1.png"
+  },
+  "docs/previews/menus/menus-2.png": {
+    "sha256": "b8b0d89c4f10a66781362444b2b5631cf03c5039818a80daef12584d0badc1b0",
+    "source": "STRAND-20-Themes-Firmware-v3/RenderedMenus/menus-2.png"
   }
 }
