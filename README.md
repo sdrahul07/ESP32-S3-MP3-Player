@@ -1,4 +1,4 @@
-# ES32-S3 MP3 Player
+# ESP32-S3 MP3 Player
 
 A reference archive of the ESP32-S3 MP3 player prototype built from off-the-shelf modules: an ESP32-S3 N16R8 dev board, Adafruit ST7789 display with microSD, PCM5102A DAC and non-I2C ANO wheel.
 
