@@ -1,0 +1,534 @@
+{
+  "firmware/CyberPlayer/App.cpp": {
+    "sha256": "32b681385f01a95f8a7fe94094c3078f506f6dbd40f745ac2efec4fa82ab59ac",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/App.cpp"
+  },
+  "firmware/CyberPlayer/Config.h": {
+    "sha256": "cb31a2c412f5201ce623c758b678764e385d97357102e7b1a469d706b4df8033",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/Config.h"
+  },
+  "firmware/CyberPlayer/CyberPlayer.ino": {
+    "sha256": "162463c78eb578bd14b3f3000c4d6dd2604ce2f36a114e0bee431b24ca9e297d",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/CyberPlayer.ino"
+  },
+  "firmware/CyberPlayer/Decoder.cpp": {
+    "sha256": "2463e05e6f766487038d5aaa6a5097ac2e0414c918947cf94c60656a8fe74772",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/Decoder.cpp"
+  },
+  "firmware/CyberPlayer/Decoder.h": {
+    "sha256": "7853d03685a24c445e2033d0f3dbcd4028bc7c6f3b245f49d0695a485e1dc410",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/Decoder.h"
+  },
+  "firmware/CyberPlayer/Media.cpp": {
+    "sha256": "c34cdef6d2e4e46d301d0be548774a54707b1ba32f92a12c7d0f7d44e62ad5b0",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/Media.cpp"
+  },
+  "firmware/CyberPlayer/Media.h": {
+    "sha256": "843edde8c2f2a82d4251d9722a24c536994bd5f66164e29c5dc712a7eb5876a2",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/Media.h"
+  },
+  "firmware/CyberPlayer/README.md": {
+    "sha256": "6ce1b61d87a45495a255e6f5adcd4c095ef037f4ebbc78c396f54d200fa3f2b6",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/README.md"
+  },
+  "firmware/CyberPlayer/vendor/minimp3.h": {
+    "sha256": "57e437c5c1f0e8b243885d3929c8973b5e6c778451e0100ab4251d19915cb3ad",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/vendor/minimp3.h"
+  },
+  "firmware/CyberPlayer/vendor/minimp3_ex.h": {
+    "sha256": "8437f3fc1d4d8ab2269a1624f5380a08df1967a048f8887789bae6e25db7db79",
+    "source": "CyberPlayerPCM5102A/CyberPlayer/vendor/minimp3_ex.h"
+  },
+  "diagnostics/PCM5102ToneTest/PCM5102ToneTest.ino": {
+    "sha256": "46eb346cfd38859f37f269e7b33eedb25732244c4a7b7099d2a297b1c70c2ae8",
+    "source": "CyberPlayerPCM5102A/PCM5102ToneTest/PCM5102ToneTest.ino"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp": {
+    "sha256": "9a0af578ea07956296834f4505e5b134ad7e1cc22ac9c9d84a640a07a94f870b",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h": {
+    "sha256": "91560f9fc1b8cda42ab039ccdfe0abf92bf09c425a6142ff54af099809b9d47a",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_GenericDevice.cpp": {
+    "sha256": "c26d9c1207c3626fb95884f01cc1f8179fcd7c2c6b0583fff25187c4f2c814d2",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_GenericDevice.cpp"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_GenericDevice.h": {
+    "sha256": "b12c364e359a0aba6aabc440bc64e375b825214a2835fa1bf38ac709f9e25546",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_GenericDevice.h"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp": {
+    "sha256": "317c342821f1df676a0e034f65685b4d6bf240d2ab8dcea91d18f1e063326d37",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_I2CDevice.h": {
+    "sha256": "88b843d7a44e3f974950d883649e5682f21d9f8ce135daff3a42d015f7cd27e7",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_I2CDevice.h"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_I2CRegister.h": {
+    "sha256": "8318d1f65d5468742c0aa48bd50a7e3bd4ddf02e3eba11bc01ad50cf9c20bc67",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_I2CRegister.h"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp": {
+    "sha256": "f846ee438eee41bef174c6dbe1f689f7ccbbd732ca4261c7b9e9337b1e5d08b5",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp"
+  },
+  "libraries/Adafruit_BusIO/Adafruit_SPIDevice.h": {
+    "sha256": "58ff1433718cef7317638403160d5dd918d92c0f7b4204fb08ad401751d74508",
+    "source": "archived-libraries/Adafruit_BusIO/Adafruit_SPIDevice.h"
+  },
+  "libraries/Adafruit_BusIO/CMakeLists.txt": {
+    "sha256": "388cb8134d21bca989fa8efc48f6e8f7960805a14bfef75ae0d23ee8dcef97cd",
+    "source": "archived-libraries/Adafruit_BusIO/CMakeLists.txt"
+  },
+  "libraries/Adafruit_BusIO/component.mk": {
+    "sha256": "65a8bc94954334982bc226826da72647027c1bcc85447804e1fbab7f23228ab7",
+    "source": "archived-libraries/Adafruit_BusIO/component.mk"
+  },
+  "libraries/Adafruit_BusIO/library.properties": {
+    "sha256": "1f1c13c18d84a15f71e8e833aeaf1ada2d505cc915485174167ea661ed085194",
+    "source": "archived-libraries/Adafruit_BusIO/library.properties"
+  },
+  "libraries/Adafruit_BusIO/LICENSE": {
+    "sha256": "86e9fafdb50d2a85d8fef369b4635b5a1b89160603e5b1f95484df0804b49508",
+    "source": "archived-libraries/Adafruit_BusIO/LICENSE"
+  },
+  "libraries/Adafruit_BusIO/README.md": {
+    "sha256": "7857d55466e3f419a4f99829968fb94ef270b816152592eb6c561e880daa6e3e",
+    "source": "archived-libraries/Adafruit_BusIO/README.md"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_GFX.cpp": {
+    "sha256": "5047f01e8e6dd3029c73cb9447a915fc06675d2e1cc9ebf6a6c1126f556fcecd",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_GFX.cpp"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_GFX.h": {
+    "sha256": "701a87030def292d6da042496db21a8b689daf2ae46c315c362b8ac7476d4259",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_GFX.h"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp": {
+    "sha256": "03ea5c79bf86d8c7a7118dee264341fac0ecc0c5ecdc57eee47dea1981f9edd6",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.h": {
+    "sha256": "27c451c21b6d16bef0fb6b94527dfe1d738a9445de4b351f75f24cc360c4e0ad",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.h"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_SPITFT.cpp": {
+    "sha256": "7bd0deccfa0517d75135bae4eac331c690d0700ef6deabb873115183ba0de597",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_SPITFT.cpp"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_SPITFT.h": {
+    "sha256": "57df2cf92aa21ce8df21a4d34eaa83882a52082ec2cda121a1134c8a456e9a6a",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_SPITFT.h"
+  },
+  "libraries/Adafruit_GFX_Library/Adafruit_SPITFT_Macros.h": {
+    "sha256": "c6f1e4e0cc97b98e85bb0c863954d41f72d3bd31874b03a57faa9ae4f8984f6d",
+    "source": "archived-libraries/Adafruit_GFX_Library/Adafruit_SPITFT_Macros.h"
+  },
+  "libraries/Adafruit_GFX_Library/CMakeLists.txt": {
+    "sha256": "1601ffb38200d00d5d8d3c7388e15a23df9186424de0792cbbf3ef8ac2629a6d",
+    "source": "archived-libraries/Adafruit_GFX_Library/CMakeLists.txt"
+  },
+  "libraries/Adafruit_GFX_Library/component.mk": {
+    "sha256": "65a8bc94954334982bc226826da72647027c1bcc85447804e1fbab7f23228ab7",
+    "source": "archived-libraries/Adafruit_GFX_Library/component.mk"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMono12pt7b.h": {
+    "sha256": "21f369cca12e929a6cc26c740b64d2e9bb40ebf8f20c5b878f064d4ebb3d36de",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMono12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMono18pt7b.h": {
+    "sha256": "f09df516cb487de3d2e0f36d9c45ffe4ea4bfc938735d10b47ff641842618688",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMono18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMono24pt7b.h": {
+    "sha256": "c9a03fb1fad357e68f7487da819b083711d7c3d11201635da5ed12a6a83821a2",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMono24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMono9pt7b.h": {
+    "sha256": "6bef1a38a049113ee9f4c7874ba3a164631e74d608df117491bcfb60fec56ec3",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMono9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold12pt7b.h": {
+    "sha256": "0739083a428d8120ac0818e0585717f46b2183f08530f9b83813f1447febc611",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold18pt7b.h": {
+    "sha256": "0c89a48671074e834b9c00d2347cb4e433799b8bfcde9eade8979a07d5bedda4",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold24pt7b.h": {
+    "sha256": "660733c0f5bdf2afc72472af94404bc59dc2eebe7e9787f064ba7756a594ce38",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold9pt7b.h": {
+    "sha256": "8cfea064cff367cf3e6a89cd2400ffdb731271f88a5016fb619dcd79b7dad733",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBold9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique12pt7b.h": {
+    "sha256": "e7d8dc059aca726294f1dbc6eb4826e13261059434d426bc717cba629cd4b61a",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique18pt7b.h": {
+    "sha256": "97083aec2726a168deafb4766377187dceb8fe6e52382b242730c3ec34cc8f8f",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique24pt7b.h": {
+    "sha256": "b30c44c9aa6edc573c1b587ac0dc56388c62d05114cb76510a0f78e4ded86d18",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique9pt7b.h": {
+    "sha256": "77e4c898599042277d04d3004feffd39b18c89d1a93f5cba65ff7506e25dd6ea",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoBoldOblique9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique12pt7b.h": {
+    "sha256": "cd07c68d1dd9ecb2654a66fbb1aeb0117f779844cc079f99678cf9c3dabf04fe",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique18pt7b.h": {
+    "sha256": "d80a751b9b2a60178699602ee042006b944263175494d53d1a404d2968a1a508",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique24pt7b.h": {
+    "sha256": "f7f878d3b47231b43c9dd07d57100dd0364abfdb8953a25fd85b107da7ab0d1f",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique9pt7b.h": {
+    "sha256": "8bbee06061722f180fe53e8813857dfd00cf404630c60283c4407f6f7700ac89",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeMonoOblique9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSans12pt7b.h": {
+    "sha256": "0e15e376ec314ac1399613e2466288d795501a467d4e7860e852976997cd7850",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSans12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSans18pt7b.h": {
+    "sha256": "b6cc5607b838fcb422ef5c5925439b54061ab63eda1e00767d0c0bf3ee0b429f",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSans18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSans24pt7b.h": {
+    "sha256": "e3cde750f607f1db3bd6c6d2d92e5cfd36a9a20d49df90d6a13b6eee7a490747",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSans24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSans9pt7b.h": {
+    "sha256": "feacaaf7df57be67d483ed35a7aeb59402ad8c9736e456e3f044e62eaf3a9314",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSans9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBold12pt7b.h": {
+    "sha256": "50b008dd06cf02fc3e46d872781f3bebb2009f09f80ca791e67138ef51d58630",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBold12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBold18pt7b.h": {
+    "sha256": "4b3a67ee0d2fd5bce431a256cc77c0acd53f8cce4e0d0619a7a2695a7fbee970",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBold18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBold24pt7b.h": {
+    "sha256": "ce00fb926f7d718b253dde1cbdd2f18c509c748ecec608c0ddc639ce188e9a54",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBold24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBold9pt7b.h": {
+    "sha256": "a833751a8153c442afaadc16de2699e9a0163264c1df2ef30f3b5bbdba2b93ed",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBold9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique12pt7b.h": {
+    "sha256": "6cf7dc07ecc478acb2822e067b05be5834331f0751bd2aba030a3d38e001a6de",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique18pt7b.h": {
+    "sha256": "b6cd1ab0683ca218a93b22c499e750300c1d4c101ac4566db84a6fa28d236f30",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique24pt7b.h": {
+    "sha256": "4fed61aa9cd99eb0a492f10e8aa01287db136e24235fb195f75412ae2e1db0ab",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique9pt7b.h": {
+    "sha256": "399a69c387df1a8cd84987f9d2b9a015443e18bf1d819b74b5bf66af6aed3ebc",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansBoldOblique9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique12pt7b.h": {
+    "sha256": "c3ae703940f3f08bf4ccbcbb24cae7771720ab8b9b8ca74d390edd99a9659688",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique18pt7b.h": {
+    "sha256": "9d03873e93cc61fcbed21128c22c37e2d93a470165280a0822dbbf331eefa122",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique24pt7b.h": {
+    "sha256": "d41e526b2d677bc32edcc5e5b674a07be7a08048375ad69d3651717de3cb7753",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique9pt7b.h": {
+    "sha256": "1ddc19a4b495408ba0d0c7efb48904d9c3459c62ab722aa54b99d283fa5cd0d4",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSansOblique9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerif12pt7b.h": {
+    "sha256": "d9e664a614eeda7ea7942b0fd85e2715d28747a712f346377c47efcbab99aed9",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerif12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerif18pt7b.h": {
+    "sha256": "498cd6591b04cc27c0306979016a059ed284f44338375143e99a0c6fa1000171",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerif18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerif24pt7b.h": {
+    "sha256": "c6cbb427f51e1ffe1f4cfe89e1f2c2317edbe0a5a8c3b517eb02719721e27c57",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerif24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerif9pt7b.h": {
+    "sha256": "330670dc6c05b39915dc47bd5b1e272a44f2bf18108eca799649d2ac7368839a",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerif9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold12pt7b.h": {
+    "sha256": "e1aa2959eb408b289cff144996efd7bf2d6b08e5eebde8dbb80792aaee8dbfeb",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold18pt7b.h": {
+    "sha256": "4fbfb1faa143e09b570e95c434c0821a07994529bec579fd22bfd9f9baad3780",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold24pt7b.h": {
+    "sha256": "e66cb62a26127b5776848167c9cb406ebc51c480123eb313e6fc9f2e38c62460",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold9pt7b.h": {
+    "sha256": "61ebd809fca54d93b4195289be5f4e837cfe41f7998cff66b5fa2c09c5916b3f",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBold9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic12pt7b.h": {
+    "sha256": "c4587d3d064b6ee43cdc27c4fbe1828cf0bf531dc19ff692d177f71b358d2277",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic18pt7b.h": {
+    "sha256": "ec0ca5a439493bded92a41534644c9db51298bcda976362880ae6ee933aea0a5",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic24pt7b.h": {
+    "sha256": "98cc662d98016e0e69125f4e0da5bce9a364490eccb008c73bf9ed313df9831a",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic9pt7b.h": {
+    "sha256": "96aec072db8f36a223d055521f1f04f6c9a1aa64395a974464d00e80e5ed67ea",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifBoldItalic9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic12pt7b.h": {
+    "sha256": "587bc04736886112a06d1bc4fbafc242c4a24de032acb42d9fda43596e2dcbcd",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic12pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic18pt7b.h": {
+    "sha256": "86cdd8f59ca0b47508a6e858f84e796adf735c0a8355e2f52784ad526033cdff",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic18pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic24pt7b.h": {
+    "sha256": "3af05ccf96780dc26b9154b7871528e3c8c7e09f82b6b00e17d9dfb5020478f8",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic24pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic9pt7b.h": {
+    "sha256": "ee4f79365a5ec0dcac844c497cbb484cc6d46d6c2391b3ebad58eec8e4ea0620",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/FreeSerifItalic9pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/Org_01.h": {
+    "sha256": "6366cd58da1ab53f7b27d68f85463d3db207c88b7a01f97132f8c6a8c3be4451",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/Org_01.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/Picopixel.h": {
+    "sha256": "035c01e6d48efdfef1e4de6152d0d03910210e449236506ec7c8f71799073363",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/Picopixel.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/Tiny3x3a2pt7b.h": {
+    "sha256": "96fe2267efcd0f9086c735ad594fe9798b868b9198720af9bf18cc929d96f474",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/Tiny3x3a2pt7b.h"
+  },
+  "libraries/Adafruit_GFX_Library/Fonts/TomThumb.h": {
+    "sha256": "a2b89525189e738feb2eba5288f9f6c7ece0b171d603468c4c585372a3342723",
+    "source": "archived-libraries/Adafruit_GFX_Library/Fonts/TomThumb.h"
+  },
+  "libraries/Adafruit_GFX_Library/gfxfont.h": {
+    "sha256": "4e1b06371217d63102bac242d4a3ec8dcaff93cd34b4241bbc39eda521a1be11",
+    "source": "archived-libraries/Adafruit_GFX_Library/gfxfont.h"
+  },
+  "libraries/Adafruit_GFX_Library/glcdfont.c": {
+    "sha256": "bd6d60ecb9cc350a83f209d7c62de2fe5f6ce3402d5598cde2988b5b44e83e02",
+    "source": "archived-libraries/Adafruit_GFX_Library/glcdfont.c"
+  },
+  "libraries/Adafruit_GFX_Library/library.properties": {
+    "sha256": "606b664be3dcf238cfb1f598b79aef514816ffe65abd21a6b456afd9a4dae932",
+    "source": "archived-libraries/Adafruit_GFX_Library/library.properties"
+  },
+  "libraries/Adafruit_GFX_Library/license.txt": {
+    "sha256": "3e7bede50526352926c2283e640f2823d9f9f2165d1852044c4fb1bbac283106",
+    "source": "archived-libraries/Adafruit_GFX_Library/license.txt"
+  },
+  "libraries/Adafruit_GFX_Library/README.md": {
+    "sha256": "6890f42a55c06828629738cb9b015f813a108a85d30013a3b1a77c4a7d0140a1",
+    "source": "archived-libraries/Adafruit_GFX_Library/README.md"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7735.cpp": {
+    "sha256": "eea457fb4211a694400f1d6985785e52dda32869140c4171d47b9dd0c16e5e1f",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7735.cpp"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7735.h": {
+    "sha256": "12cfc1befc01a0bdf92952ca71b87bcaa9c75b1a5257f923505f66f09460cce6",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7735.h"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7789.cpp": {
+    "sha256": "6036da923e50ef41e7ef69bfa37037567fd677faa8cb721aad6f5591097177b1",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7789.cpp"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7789.h": {
+    "sha256": "c9c05f66905c590d6ff24f56c61f37e9fc09a1da9c489654ebbb436bea9b2347",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7789.h"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7796S.cpp": {
+    "sha256": "cfb8996c55d39ffc39221091dbe9c55ee3a5474aa801932d7d54682125144780",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7796S.cpp"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST7796S.h": {
+    "sha256": "8364d90cd8a0706c28d86dfbf05a6c91a695762cc4ff344b16aa688b74b5907f",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST7796S.h"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST77xx.cpp": {
+    "sha256": "fee9c09974591cd4b081774589d76c767b25bb44952443bb83b6ff37ead7a5e9",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST77xx.cpp"
+  },
+  "libraries/Adafruit_ST7735/Adafruit_ST77xx.h": {
+    "sha256": "fc923d7c6e99a93a2d40102dfb0bff630a2e6fb95dcc646b06db79da015f0fc5",
+    "source": "archived-libraries/Adafruit_ST7735/Adafruit_ST77xx.h"
+  },
+  "libraries/Adafruit_ST7735/CMakeLists.txt": {
+    "sha256": "b33fd0dd7546ac1dc8c420e1b469f90680495968b89047c199e3704395bfe4e7",
+    "source": "archived-libraries/Adafruit_ST7735/CMakeLists.txt"
+  },
+  "libraries/Adafruit_ST7735/library.properties": {
+    "sha256": "435e3eebc27f8e450fba01bb4107f767c0b190e87e07c1603214c677ee24d3a1",
+    "source": "archived-libraries/Adafruit_ST7735/library.properties"
+  },
+  "libraries/Adafruit_ST7735/README.txt": {
+    "sha256": "750db5c0ae93f14a8cedd7be6c8cec22556b691e68417f51f55542bff30e2742",
+    "source": "archived-libraries/Adafruit_ST7735/README.txt"
+  },
+  "libraries/JPEGDEC/CMakeLists.txt": {
+    "sha256": "727a08dfa1565257530e49588bd5c9c0d1372bc279325985401f260a8bfe72ab",
+    "source": "archived-libraries/JPEGDEC/CMakeLists.txt"
+  },
+  "libraries/JPEGDEC/library.json": {
+    "sha256": "cbdacc60580eac50bfa65b9ef77ac0e205ef5d63acb3220d484b707df1b206e1",
+    "source": "archived-libraries/JPEGDEC/library.json"
+  },
+  "libraries/JPEGDEC/library.properties": {
+    "sha256": "ce421f73df9dc750476de98da5290e353b29df51be5e8987219fa4a3864cccbf",
+    "source": "archived-libraries/JPEGDEC/library.properties"
+  },
+  "libraries/JPEGDEC/LICENSE": {
+    "sha256": "16b742c2110129c89df82164a28dbecb7ca1fe100c75c30e5c506f050c0c6de5",
+    "source": "archived-libraries/JPEGDEC/LICENSE"
+  },
+  "libraries/JPEGDEC/README.md": {
+    "sha256": "ef158cb1882b8a6abe6c3902d9c08ff590821516bdcd4c83b4b21a587711d40f",
+    "source": "archived-libraries/JPEGDEC/README.md"
+  },
+  "libraries/JPEGDEC/src/jpeg.inl": {
+    "sha256": "ab6dd18350a8d1ab73ad8b296d7da7274684fa4571f9abdd46d5630709a0c7bc",
+    "source": "archived-libraries/JPEGDEC/src/jpeg.inl"
+  },
+  "libraries/JPEGDEC/src/JPEGDEC.cpp": {
+    "sha256": "cce4a7cd6fe8fe26825276f9c65ed9c96bf1fe31a15c79e0169ee2385543d210",
+    "source": "archived-libraries/JPEGDEC/src/JPEGDEC.cpp"
+  },
+  "libraries/JPEGDEC/src/JPEGDEC.h": {
+    "sha256": "3c7ed1ec539bc581ee189aa27857c4a228cc6668455b8aca2912466efa881d34",
+    "source": "archived-libraries/JPEGDEC/src/JPEGDEC.h"
+  },
+  "libraries/JPEGDEC/src/JPEGDisplay.h": {
+    "sha256": "1f33a6b40edb36f9ecd8af990fac330136c0ce474e59d3e0455f12a5a8a7c0fd",
+    "source": "archived-libraries/JPEGDEC/src/JPEGDisplay.h"
+  },
+  "libraries/JPEGDEC/src/JPEGDisplay.inl": {
+    "sha256": "dc67e73bedef628b667994074134f76685324617cb0af77adc9e04c310958f49",
+    "source": "archived-libraries/JPEGDEC/src/JPEGDisplay.inl"
+  },
+  "libraries/JPEGDEC/src/my_cm4_simd.h": {
+    "sha256": "f3a623f6e5eb277cafa4f07ace0fbc78b24c877a88f30903c177920d86475a72",
+    "source": "archived-libraries/JPEGDEC/src/my_cm4_simd.h"
+  },
+  "libraries/JPEGDEC/src/s3_simd_420.S": {
+    "sha256": "a58e31320ec9e605199140f11168296f7d6e9644e95dcce569d7e13741de08f4",
+    "source": "archived-libraries/JPEGDEC/src/s3_simd_420.S"
+  },
+  "libraries/JPEGDEC/src/s3_simd_444.S": {
+    "sha256": "9be729add38c8dc6f9cd3777c2a5588ac17444fa4101333065f5152ea8e91ef5",
+    "source": "archived-libraries/JPEGDEC/src/s3_simd_444.S"
+  },
+  "libraries/JPEGDEC/src/s3_simd_dequant.S": {
+    "sha256": "e653911302ef130e2a8dd586d28c691bd16084135048d6ee8f4e768ca6d39714",
+    "source": "archived-libraries/JPEGDEC/src/s3_simd_dequant.S"
+  },
+  "libraries/JPEGDEC/src/s3_simd_idct.S_FUTURE": {
+    "sha256": "60f20cd6a744c17a4a1ec45697b46dde867cecb9e10496f47a8e4f5ff650b71b",
+    "source": "archived-libraries/JPEGDEC/src/s3_simd_idct.S_FUTURE"
+  },
+  "libraries/bb_spi_lcd/library.properties": {
+    "sha256": "04ccc80cf9d893d7b91cecefa6de13e091070ef560311c0dfe2548762e5e06ce",
+    "source": "archived-libraries/bb_spi_lcd/library.properties"
+  },
+  "libraries/bb_spi_lcd/LICENSE": {
+    "sha256": "286254e9c571f05ffaa9a864574691255392a0a81d0a001d442d5c9f9db5faf2",
+    "source": "archived-libraries/bb_spi_lcd/LICENSE"
+  },
+  "libraries/bb_spi_lcd/README.md": {
+    "sha256": "0f4b72820130496be41a93fe8b71961f3e8d1117034a3d5bde0adaee7f43b87f",
+    "source": "archived-libraries/bb_spi_lcd/README.md"
+  },
+  "libraries/bb_spi_lcd/src/bb_parallel.cpp": {
+    "sha256": "516de35636b574ed1d199ca5573e37124796b3760ea59e02325d63ee3c6fe85a",
+    "source": "archived-libraries/bb_spi_lcd/src/bb_parallel.cpp"
+  },
+  "libraries/bb_spi_lcd/src/bb_spi_lcd.cpp": {
+    "sha256": "8f6714b03d0aaeae197ab8f46847fc8dbc2c42aade5b2ec87bd77b5e475ba392",
+    "source": "archived-libraries/bb_spi_lcd/src/bb_spi_lcd.cpp"
+  },
+  "libraries/bb_spi_lcd/src/bb_spi_lcd.h": {
+    "sha256": "0c3557cc79156652d5c8518eb4e0ef00664d886c62022bffa649637d87f2003b",
+    "source": "archived-libraries/bb_spi_lcd/src/bb_spi_lcd.h"
+  },
+  "libraries/bb_spi_lcd/src/bb_spi_lcd.new": {
+    "sha256": "57caf8002f41b38555c6e436f24483dd3fe5618834208526d45e4ffa477c5084",
+    "source": "archived-libraries/bb_spi_lcd/src/bb_spi_lcd.new"
+  },
+  "libraries/bb_spi_lcd/src/esp_lcd_jd9165.c": {
+    "sha256": "7649603f0fa97f93ce32d431cd085b8d06fca1167abc8c3112391f1478d24312",
+    "source": "archived-libraries/bb_spi_lcd/src/esp_lcd_jd9165.c"
+  },
+  "libraries/bb_spi_lcd/src/esp_lcd_jd9165.h": {
+    "sha256": "1369162f17e292111cd8760227ee107ff26e0a90d3ada361e8eec8d5a18171de",
+    "source": "archived-libraries/bb_spi_lcd/src/esp_lcd_jd9165.h"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_alphablend.S": {
+    "sha256": "90ddc3026ba0eab16ad556fd0d707eccaa849cc84b5d7164149552785e2305dc",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_alphablend.S"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_alphatrans.S": {
+    "sha256": "debbd5819e24a46955738861ed86869e526273032ccca01d0f5b3948c2fc1c5f",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_alphatrans.S"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_blur.S": {
+    "sha256": "ebb88b4adc6766f1caa030d39ef2d68972350cac4f19e0e8f27ac431fadcbe0d",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_blur.S"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_byteswap.S": {
+    "sha256": "813d9be3e45b8b20c83955055bf4c77ef241806d60ac4da86329c665c9cf7513",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_byteswap.S"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_tile53.S": {
+    "sha256": "9189c3a9ae921b93eaa7231667ce0043f7b59adac3c27ddb9b6810cab6ff8a84",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_tile53.S"
+  },
+  "libraries/bb_spi_lcd/src/s3_simd_tint.S": {
+    "sha256": "e2dcf66f8b6f17d3fee7de88940ed3e6ee5d6084d80b784979e1599541cc145b",
+    "source": "archived-libraries/bb_spi_lcd/src/s3_simd_tint.S"
+  },
+  "firmware/PCM5102-WIRING.md": {
+    "sha256": "c16f0bee6e7e7e6260e979482fa54cf8ae09f2d5a5333a84e455cc3859deb5b1",
+    "source": "CyberPlayerPCM5102A/PCM5102-WIRING.md"
+  }
+}

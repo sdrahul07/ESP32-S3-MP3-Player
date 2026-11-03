@@ -1,0 +1,2 @@
+# Frozen archive: keep original bytes so SHA-256 matches on every platform.
+* -text

@@ -1,0 +1,18 @@
+# Generated builds and local configuration
+build/
+.arduinoIDE/
+.vscode/
+*.bin
+*.elf
+*.map
+*.log
+*.zip
+__pycache__/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+# Hardware design belongs outside this prototype reference
+*.kicad_*
+*.gbr
+*.drl
