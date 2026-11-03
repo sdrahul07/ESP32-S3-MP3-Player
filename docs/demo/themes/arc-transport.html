@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arc Transport — interactive concept</title><script>window.lucide={createIcons(){}};</script></head><body><div id="minimal-transport" class="viz-carousel viz-dotted-background" aria-label="Minimal technical player concepts">
+<section data-variant="Arc Transport"><div class="mt-stage"><canvas width="320" height="240" role="img" aria-label="Arc Transport player with a curved playback ruler and large elapsed time"></canvas></div></section>
+<section data-variant="Chrono Deck" hidden><div class="mt-stage"><canvas width="320" height="240" role="img" aria-label="Chrono Deck player with thin numerals and an orange playback timeline"></canvas></div></section>
+</div>
+<div id="mt-controls" class="viz-controls"><button type="button" class="btn" data-a="play">Pause</button><button type="button" class="btn" data-a="seek">Seek +10 s</button><button type="button" class="btn" data-a="track">Next sample</button><button type="button" class="btn" data-a="minus">Volume −</button><button type="button" class="btn" data-a="plus">Volume +</button><button type="button" class="btn" data-a="size">Actual size</button></div>
+<style>@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');#minimal-transport{padding:36px 8px 12px}#minimal-transport .mt-stage{display:flex;justify-content:center;padding:12px 0 24px}#minimal-transport canvas{width:640px;max-width:100%;height:auto;background:#000;image-rendering:auto}</style>
+<script>
+(()=>{const root=document.getElementById('minimal-transport'),controls=document.getElementById('mt-controls'),canvases=[...root.querySelectorAll('canvas')];let state={playing:true,elapsed:34,track:0,volume:12,actual:false};const tracks=[['Disorder','Joy Division',209],['Nightcall','Kavinsky',258],['Midnight City','M83',243]];
+function clock(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function draw(cv,id){const c=cv.getContext('2d'),white='#edf1ed',dim='#909b9d',quiet='#252c2e',accent=id?'#ff6215':'#edb929',song=tracks[state.track];
+function r(x,y,w,h,col){c.fillStyle=col;c.fillRect(x,y,w,h)}function t(s,x,y,size=10,col=white,font='Arial',weight=400){c.fillStyle=col;c.font=`${weight} ${size}px "${font}",sans-serif`;c.fillText(s,x,y)}function round(x,y,w,h,rad,col){c.fillStyle=col;c.beginPath();c.roundRect(x,y,w,h,rad);c.fill()}
+r(0,0,320,240,'#000000');
+if(id===0){t('LOCAL / MP3',14,20,8,dim,'IBM Plex Mono');t(String(state.track+3).padStart(2,'0')+' / 120',254,20,8,dim,'IBM Plex Mono');const cx=-106,cy=127,base=185;
+for(let j=-23;j<=23;j++){let a=j*.033,long=j%5===0,near=Math.abs(j)<3,rr=base-(long?22:10);c.strokeStyle=near?'#d4ddda':quiet;c.lineWidth=long?1.2:.7;c.beginPath();c.moveTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);c.lineTo(cx+Math.cos(a)*base,cy+Math.sin(a)*base);c.stroke();if(long&&j>=-15&&j<=15){let v=state.elapsed+j*2;if(v>=0)t(clock(v),cx+Math.cos(a)*(rr-29)-8,cy+Math.sin(a)*(rr-29)+3,8,near?white:dim,'Rajdhani')}}
+r(58,126,31,1,accent);r(95,126,4,1,accent);t(song[0],111,70,23,white,'Arial');t(song[1],112,89,11,dim);round(105,104,202,61,30,'#171b1d');t(clock(state.elapsed),121,153,58,white,'Rajdhani',300);t('ELAPSED',112,182,7,dim,'IBM Plex Mono');t('/ '+clock(song[2]),257,182,8,dim,'IBM Plex Mono');t(state.playing?'PLAYING':'PAUSED',111,213,11,accent,'IBM Plex Mono');t('VOL '+String(state.volume).padStart(2,'0'),259,213,8,dim,'IBM Plex Mono');
+}else{t(song[0],15,27,17,white,'IBM Plex Mono',500);t(song[1],16,46,10,dim);t(clock(state.elapsed),12,124,79,white,'Rajdhani',300);t('/ '+clock(song[2]),236,111,20,dim,'Rajdhani',300);t('PLAYBACK',16,140,7,dim,'IBM Plex Mono');round(14,150,292,48,10,accent);t('0:00',25,165,8,'#161919','IBM Plex Mono');c.textAlign='right';t(clock(song[2]),295,165,8,'#161919','IBM Plex Mono');c.textAlign='left';for(let j=0;j<=64;j++){let x=25+j*4.2;r(x,175,1,j%8===0?9:4,'#84330b')}r(25,177,269*state.elapsed/song[2],3,'#171b1d');r(24+269*state.elapsed/song[2],172,2,13,'#171b1d');t(state.playing?'PLAYING':'PAUSED',16,225,9,white,'IBM Plex Mono');t('VOL '+String(state.volume).padStart(2,'0'),150,225,8,dim,'IBM Plex Mono');t(String(state.track+3).padStart(2,'0')+' / 120',257,225,8,dim,'IBM Plex Mono');}
+cv.style.width=state.actual?'320px':'640px';}
+function render(){canvases.forEach(draw);controls.querySelector('[data-a="play"]').textContent=state.playing?'Pause':'Play'}
+function restore(v){if(!v)return;state={...state,...v};state.track=Math.max(0,Math.min(2,Number(state.track)||0));state.elapsed=Math.max(0,Math.min(tracks[state.track][2],Number(state.elapsed)||0));state.volume=Math.max(0,Math.min(100,Number(state.volume)||0));render()}
+controls.querySelectorAll('button').forEach(b=>b.onclick=()=>{let a=b.dataset.a;if(a==='play')state.playing=!state.playing;if(a==='seek')state.elapsed=Math.min(tracks[state.track][2],state.elapsed+10);if(a==='track'){state.track=(state.track+1)%3;state.elapsed=34}if(a==='minus'||a==='plus')state.volume=Math.max(0,Math.min(100,state.volume+(a==='plus'?1:-1)));if(a==='size')state.actual=!state.actual;render();void 0});render();restore(undefined);if(document.fonts)document.fonts.ready.then(render);
+})();
+</script>
+<style>
+html{color-scheme:dark;--screen-width:640px}html,body{margin:0;padding:0;background:#121518;color:#e9eee9;font:14px/1.5 ui-monospace,monospace}*{box-sizing:border-box}
+body{padding:20px 12px}section[hidden]{display:none!important}canvas{display:block!important;width:var(--screen-width)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;image-rendering:pixelated}
+body>div,.viz-carousel{padding:0!important;margin:0!important;background:transparent!important}
+[class$="-stage"],[class$="-product"]{padding:0!important;min-height:0!important;max-width:none!important;margin:0 auto!important;display:grid!important;justify-items:center!important;gap:16px!important}
+button{font:inherit!important;color:#e9eee9!important;background:#252c32!important;border:1px solid #48525b!important;border-radius:6px!important;padding:9px 12px!important;min-height:42px!important;cursor:pointer}button:hover{border-color:#c5f568!important}button:focus-visible{outline:2px solid #c5f568;outline-offset:3px}
+.wd-scale,[data-a="size"]{display:none!important}.wd-controls,.viz-controls,[class$="-actions"],[class$="-controls"]{display:flex!important;justify-content:center!important;gap:8px!important;flex-wrap:wrap!important;padding:0!important;margin:14px auto!important;max-width:680px!important}
+[class$="-note"],[class$="-caption"]{max-width:640px;margin:14px auto;color:#b0bcb9;font:12px/1.6 ui-monospace,monospace}
+</style>
+<script>
+(()=>{
+const variants=[...document.querySelectorAll('section[data-variant]')];
+variants.forEach((section,i)=>section.hidden=i!==0);
+function visible(button){return !button.closest('[hidden]')}
+function press(selectors){for(const selector of selectors){const button=[...document.querySelectorAll(selector)].find(visible);if(button){button.click();return true}}return false}
+function command(action){const actions={
+ play:['[data-action="play"]','[data-a="play"]','[data-a="pause"]','[data-play]','[data-act="play"]'],
+ menu:['[data-action="menu"]','[data-a="library"]','[data-view="menu"]','[data-act="themes"]'],
+ center:['[data-action="select"]','[data-act="select"]'],
+ up:['[data-action="up"]','[data-a="plus"]','[data-act="move"]'],
+ down:['[data-action="down"]','[data-a="minus"]','[data-act="move"]'],
+ previous:['[data-action="previous"]'],next:['[data-action="next"]','[data-a="track"]','[data-action="next"]'],
+ back:['[data-action="back"]'],forward:['[data-action="forward"]','[data-a="seek"]']};
+ return press(actions[action]||[])}
+function scale(value){document.documentElement.style.setProperty('--screen-width',(320*value)+'px')}
+window.addEventListener('message',e=>{if(e.source!==parent)return;if(location.protocol!=='file:'&&e.origin!==location.origin)return;if(e.data?.type==='prototype-scale')scale(e.data.scale===1?1:2);if(e.data?.type==='prototype-command')command(e.data.action)});
+window.addEventListener('keydown',e=>{if(e.target.matches('button,input,select,textarea'))return;const keys={' ':'play',ArrowUp:'up',ArrowDown:'down',ArrowLeft:'previous',ArrowRight:'next',Enter:'center',Escape:'menu'};if(keys[e.key]){e.preventDefault();command(keys[e.key])}});
+parent.postMessage({type:'prototype-ready'},location.protocol==='file:'?'*':location.origin);
+})();
+</script></body></html>

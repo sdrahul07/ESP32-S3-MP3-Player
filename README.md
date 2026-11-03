@@ -2,6 +2,10 @@
 
 A reference archive of the ESP32-S3 MP3 player prototype built from off-the-shelf modules: an ESP32-S3 N16R8 dev board, Adafruit ST7789 display with microSD, PCM5102A DAC and non-I2C ANO wheel.
 
+**[Try the interactive UI demo →](https://sdrahul07.github.io/ES32-S3-MP3-Player/)**
+
+Explore all 20 selected concepts, use their playback/library preview controls, and compare them with the saved firmware-rendered screens. The browser demo uses simulated sample tracks and animation, with no music playback or device connection. [Demo details and local setup](docs/DEMO.md).
+
 This repository preserves the module prototype before custom-board development. No custom PCB, KiCad project, fabrication files or integrated-board designs are included. Firmware files are copied unchanged from saved source snapshots.
 
 ## Start here

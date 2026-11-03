@@ -1,0 +1,202 @@
+[
+  {
+    "id": "neon-fishbone",
+    "label": "Neon Fishbone",
+    "number": 1,
+    "source": "neon-fishbone-preview.html",
+    "variant": 0,
+    "preview": "01-Neon-Fishbone.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "sakura-tape",
+    "label": "Sakura Tape",
+    "number": 2,
+    "source": "sakura-tape-preview.html",
+    "variant": 0,
+    "preview": "02-Sakura-Tape.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "sunvair-flight",
+    "label": "Sunvair Flight",
+    "number": 3,
+    "source": "sunvair-flight-preview.html",
+    "variant": 0,
+    "preview": "03-Sunvair-Flight.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "nasa-worm",
+    "label": "NASA Worm",
+    "number": 4,
+    "source": "nasa-worm-preview.html",
+    "variant": 0,
+    "preview": "04-NASA-Worm.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "card-battle-light",
+    "label": "Card Battle · Light",
+    "number": 5,
+    "source": "card-battle-light-preview.html",
+    "variant": 0,
+    "preview": "05-Card-Battle.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "lunar-courier",
+    "label": "Lunar Courier",
+    "number": 6,
+    "source": "lunar-courier-preview.html",
+    "variant": 0,
+    "preview": "06-Lunar-Courier.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "tidal-station",
+    "label": "Tidal Station",
+    "number": 7,
+    "source": "tidal-station-preview.html",
+    "variant": 0,
+    "preview": "07-Tidal-Station.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "amber-workshop",
+    "label": "Amber Workshop",
+    "number": 8,
+    "source": "amber-workshop-preview.html",
+    "variant": 0,
+    "preview": "08-Amber-Workshop.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "iron-circuit-dark",
+    "label": "Iron Circuit · Dark",
+    "number": 9,
+    "source": "iron-circuit-preview.html",
+    "variant": 0,
+    "preview": "09-Iron-Circuit.png",
+    "group": "Illustrated",
+    "controls": "Playback, songs, library, volume and seek"
+  },
+  {
+    "id": "melody-machine",
+    "label": "Melody Machine",
+    "number": 10,
+    "source": "pixel-game-directions.html",
+    "variant": 1,
+    "preview": "10-Melody-Machine.png",
+    "group": "Pixel",
+    "controls": "Player / library and animation preview"
+  },
+  {
+    "id": "pocket-os",
+    "label": "Pocket OS",
+    "number": 11,
+    "source": "pixel-game-directions.html",
+    "variant": 2,
+    "preview": "11-Pocket-OS.png",
+    "group": "Pixel",
+    "controls": "Player / library and animation preview"
+  },
+  {
+    "id": "dungeon-deck",
+    "label": "Dungeon Deck",
+    "number": 12,
+    "source": "pixel-scene-directions.html",
+    "variant": 1,
+    "preview": "12-Dungeon-Deck.png",
+    "group": "Pixel",
+    "controls": "Player / library and animation preview"
+  },
+  {
+    "id": "amber-navigator",
+    "label": "Amber Navigator",
+    "number": 13,
+    "source": "pixel-scene-directions.html",
+    "variant": 2,
+    "preview": "13-Amber-Navigator.png",
+    "group": "Pixel",
+    "controls": "Player / library and animation preview"
+  },
+  {
+    "id": "signal-report-black",
+    "label": "Signal Report · Black",
+    "number": 14,
+    "source": "strand-midnight.html",
+    "variant": 0,
+    "preview": "14-Signal-Report-Black.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "tape-session",
+    "label": "Tape Session",
+    "number": 15,
+    "source": "strand-midnight.html",
+    "variant": 1,
+    "preview": "15-Tape-Session.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "signal-report-light",
+    "label": "Signal Report · Light",
+    "number": 16,
+    "source": "strand-instruments.html",
+    "variant": 0,
+    "preview": "16-Signal-Report-Light.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "arc-transport",
+    "label": "Arc Transport",
+    "number": 17,
+    "source": "minimal-transport.html",
+    "variant": 0,
+    "preview": "17-Arc-Transport.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "chrono-deck",
+    "label": "Chrono Deck",
+    "number": 18,
+    "source": "minimal-transport.html",
+    "variant": 1,
+    "preview": "18-Chrono-Deck.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "phosphor-deck",
+    "label": "Phosphor Deck",
+    "number": 19,
+    "source": "player-design-directions.html",
+    "variant": 0,
+    "preview": "19-Phosphor-Deck.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  },
+  {
+    "id": "retro-desktop",
+    "label": "Retro Desktop",
+    "number": 20,
+    "source": "player-themes-mockup.html",
+    "variant": 2,
+    "preview": "20-Retro-Desktop.png",
+    "group": "Technical",
+    "controls": "Concept-specific controls below the screen"
+  }
+]

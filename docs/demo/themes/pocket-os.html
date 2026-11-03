@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket OS — interactive concept</title><script>window.lucide={createIcons(){}};</script></head><body><div id="pixel-game-directions" class="viz-carousel viz-dotted-background" aria-label="Pixel game music player directions">
+ <section data-variant="Amber Quest"><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Amber Quest music player, dark plum scenery with gold pixel borders and cream selected rows"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+ <section data-variant="Melody Machine" hidden><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Melody Machine music player with lavender panels, warm yellow dials and an instrument editor layout"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+ <section data-variant="Pocket OS" hidden><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Pocket OS music player with a blue dithered desktop, cream windows and a mint disk motif"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+</div>
+<style>
+#pixel-game-directions .pg-stage{padding:24px 10px;display:grid;justify-items:center;gap:18px;min-height:370px}
+#pixel-game-directions canvas{width:640px;max-width:100%;height:auto;display:block;image-rendering:pixelated}
+#pixel-game-directions .pg-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+#pixel-game-directions button{font:14px monospace;padding:10px 14px;min-height:44px;background:#252039;color:#fff1e8;border:2px solid #83769c}
+#pixel-game-directions button[aria-pressed=true]{background:#fff1e8;color:#252039}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('pixel-game-directions');
+const glyphs={A:['01110','10001','10001','11111','10001','10001','10001'],B:['11110','10001','10001','11110','10001','10001','11110'],C:['01111','10000','10000','10000','10000','10000','01111'],D:['11110','10001','10001','10001','10001','10001','11110'],E:['11111','10000','10000','11110','10000','10000','11111'],F:['11111','10000','10000','11110','10000','10000','10000'],G:['01111','10000','10000','10111','10001','10001','01111'],H:['10001','10001','10001','11111','10001','10001','10001'],I:['111','010','010','010','010','010','111'],J:['00111','00010','00010','00010','10010','10010','01100'],K:['10001','10010','10100','11000','10100','10010','10001'],L:['10000','10000','10000','10000','10000','10000','11111'],M:['10001','11011','10101','10101','10001','10001','10001'],N:['10001','11001','10101','10011','10001','10001','10001'],O:['01110','10001','10001','10001','10001','10001','01110'],P:['11110','10001','10001','11110','10000','10000','10000'],Q:['01110','10001','10001','10001','10101','10010','01101'],R:['11110','10001','10001','11110','10100','10010','10001'],S:['01111','10000','10000','01110','00001','00001','11110'],T:['11111','00100','00100','00100','00100','00100','00100'],U:['10001','10001','10001','10001','10001','10001','01110'],V:['10001','10001','10001','10001','10001','01010','00100'],W:['10001','10001','10001','10101','10101','10101','01010'],X:['10001','10001','01010','00100','01010','10001','10001'],Y:['10001','10001','01010','00100','00100','00100','00100'],Z:['11111','00001','00010','00100','01000','10000','11111'],0:['01110','10001','10011','10101','11001','10001','01110'],1:['010','110','010','010','010','010','111'],2:['01110','10001','00001','00010','00100','01000','11111'],3:['11110','00001','00001','01110','00001','00001','11110'],4:['10010','10010','10010','11111','00010','00010','00010'],5:['11111','10000','10000','11110','00001','00001','11110'],6:['01110','10000','10000','11110','10001','10001','01110'],7:['11111','00001','00010','00100','01000','01000','01000'],8:['01110','10001','10001','01110','10001','10001','01110'],9:['01110','10001','10001','01111','00001','00001','01110'],':':['0','1','1','0','1','1','0'],'/':['00001','00001','00010','00100','01000','10000','10000'],'.':['0','0','0','0','0','1','1'],'-':['000','000','000','111','000','000','000'],'+':['000','010','010','111','010','010','000']};
+root.querySelectorAll('section').forEach((section,variant)=>{
+const canvas=section.querySelector('canvas'),ctx=canvas.getContext('2d');let view='player',playing=false,phase=0,timer=null;
+const cream='#fff1d2',gold='#ffbd53',plum='#211b34',lav='#9b82c4',ink='#34263e',pink='#e86a8c',mint='#83d9b0';
+function r(a,b,w,h,col){ctx.fillStyle=col;ctx.fillRect(Math.round(a),Math.round(b),w,h)}
+function t(s,a,b,col,z=1){for(const ch of s.toUpperCase()){const g=glyphs[ch];if(!g){a+=4*z;continue}g.forEach((row,j)=>[...row].forEach((p,i)=>{if(p==='1')r(a+i*z,b+j*z,z,z,col)}));a+=(g[0].length+1)*z}}
+function box(a,b,w,h,col,bg){r(a,b,w,h,bg);r(a,b,w,2,col);r(a,b+h-2,w,2,col);r(a,b,2,h,col);r(a+w-2,b,2,h,col)}
+function dots(a,b,w,h,col,step=4){for(let yy=b;yy<b+h;yy+=step)for(let xx=a+(yy%8?0:2);xx<a+w;xx+=step)r(xx,yy,1,1,col)}
+function disc(cx,cy,rad,col){for(let yy=-rad;yy<=rad;yy++){let w=Math.floor(Math.sqrt(rad*rad-yy*yy));r(cx-w,cy+yy,w*2+1,1,col)}}
+function dial(cx,cy,value,col){disc(cx+1,cy+2,14,ink);disc(cx,cy,13,cream);disc(cx,cy,10,col);const a=-2.4+value*4.8;r(cx+Math.sin(a)*7-1,cy-Math.cos(a)*7-1,3,3,ink);r(cx-1,cy-1,3,3,ink)}
+function row(s,y,selected){if(selected)r(24,y-3,272,22,cream);t(s,34,y+2,selected?plum:gold,2)}
+function windowBox(a,b,w,h,title){r(a+3,b+3,w,h,ink);box(a,b,w,h,ink,cream);r(a+3,b+3,w-6,13,'#b6d5e9');t(title,a+8,b+6,ink);r(a+4,b+17,w-8,1,ink);box(a+w-15,b+5,9,9,ink,cream)}
+function draw(){
+if(variant===0){
+r(0,0,320,240,plum);
+// A quiet tiled backdrop gives the menu the sense of a paused game.
+for(let yy=12;yy<240;yy+=24)for(let xx=0;xx<320;xx+=24){box(xx,yy,22,22,'#29243d',plum);if((xx+yy)%7===0)r(xx+7,yy+10,3,5,'#3a2c49')}
+t('POCKET QUEST',16,13,gold);t('SD / 120',246,13,lav);t(view==='player'?'NOW PLAYING':'MUSIC LIBRARY',20,37,gold,2);
+box(17,61,286,151,gold,plum);r(17,61,8,7,plum);r(295,61,8,7,plum);r(20,64,3,3,gold);r(297,64,3,3,gold);
+if(view==='player'){
+t('NIGHT DRIVE',30,77,cream,2);t('NEON DISTRICT',31,101,gold);
+// Pixel tape transport, drawn as game inventory equipment.
+box(30,121,78,51,gold,'#382845');r(36,127,66,28,plum);[51,87].forEach(cx=>{disc(cx,141,10,gold);disc(cx,141,6,plum);const a=phase;r(cx+Math.cos(a)*5-1,141+Math.sin(a)*5-1,3,3,cream)});r(61,139,16,3,gold);r(49,159,40,7,gold);
+t('1:42',127,127,cream,3);t('/ 4:08',128,154,lav);t('08 / 120',228,158,gold);
+r(31,184,258,5,'#493551');r(31,184,106,5,gold);r(134,181,6,11,cream);t(playing?'PLAYING':'PAUSED',31,199,gold);t('VOL 42',249,199,gold);
+}else{row('ALL SONGS',76,true);row('ARTISTS',104,false);row('ALBUMS',132,false);row('FOLDERS',160,false);t('120 TRACKS ON SD',34,194,lav)}
+t('LEFT BACK',20,225,lav);t('PRESS SELECT',205,225,gold);
+}else if(variant===1){
+r(0,0,320,240,'#594967');r(0,0,320,18,ink);t('MUSIC / LOCAL',9,6,cream);t('08 / 120',250,6,mint);
+box(9,25,302,38,ink,lav);t(view==='player'?'TRACK NAME':'MUSIC LIBRARY',16,31,ink);r(15,43,290,15,ink);t(view==='player'?'NIGHT DRIVE':'ALL SONGS',20,47,cream);
+if(view==='player'){
+box(9,69,302,35,gold,gold);t('NEON DISTRICT',17,77,ink,2);t('MP3 / 44.1 KHZ',17,94,ink);
+// Two large, purposeful transport controls rather than a wall of fake parameters.
+box(9,110,96,70,gold,lav);r(11,112,92,12,ink);t('VOLUME',22,115,gold);dial(57,146,.42,gold);t('42 / 100',31,168,ink);
+box(110,110,201,70,gold,lav);r(112,112,197,12,ink);t('TRANSPORT',122,115,gold);t('1:42',123,135,cream,3);t('/ 4:08',244,153,ink);t(playing?'PLAYING':'PAUSED',124,169,ink);
+r(9,188,302,22,ink);for(let a=14;a<306;a+=6)r(a,194,3,10,a<136?gold:lav);r(134,190,3,18,cream);
+}else{['NIGHT DRIVE','WE RUN','BALL TONGUE','TRANSMISSION'].forEach((s,i)=>{let yy=72+i*32;box(9,yy,302,28,ink,i===0?gold:lav);t(String(i+1).padStart(2,'0'),17,yy+10,ink);t(s,47,yy+8,ink,2)});}
+r(9,217,302,16,lav);t('LEFT BACK',15,222,ink);t('PRESS SELECT',230,222,ink);
+}else{
+r(0,0,320,240,'#3b79c8');dots(0,18,320,222,'#6698d3');r(0,0,320,18,cream);t('POCKET OS',8,6,ink);t('MUSIC',112,6,ink);t('SD 120',270,6,ink);
+windowBox(12,29,266,view==='player'?157:177,view==='player'?'PLAYER / 08':'LIBRARY / 120');
+if(view==='player'){
+box(22,55,71,81,ink,'#b5d5c3');disc(57,90,25,ink);disc(57,90,17,mint);disc(57,90,6,cream);const a=phase;r(57+Math.cos(a)*12-2,90+Math.sin(a)*12-2,4,4,ink);t('SIDE A',39,123,ink);
+t('NIGHT',105,60,ink,2);t('DRIVE',105,80,ink,2);t('NEON DISTRICT',105,105,ink);t('MP3 / 44.1K',105,124,'#5f6173');
+r(22,145,246,5,'#b5b8ba');r(22,145,102,5,'#427f86');r(121,142,5,11,ink);t('1:42',22,161,ink);t(playing?'PLAYING':'PAUSED',115,161,ink);t('4:08',245,161,ink);
+}else{['ALL SONGS','ARTISTS','ALBUMS','FOLDERS','PLAYLISTS'].forEach((s,i)=>{let yy=56+i*27;r(22,yy,246,24,i===0?'#285a9f':cream);box(29,yy+5,14,12,ink,i===0?mint:'#b6d5e9');t(s,52,yy+7,i===0?cream:ink)});}
+box(290,37,20,23,ink,cream);r(294,40,12,10,'#e88d78');t('SD',291,66,cream);
+if(view==='player'){windowBox(129,193,176,35,'VOLUME');r(141,218,115,3,ink);box(185,212,8,12,ink,mint);t('42',273,215,ink);}
+t('LEFT BACK',13,226,cream);
+}
+}
+section.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;section.querySelectorAll('[data-view]').forEach(q=>q.setAttribute('aria-pressed',String(q===b)));draw()});
+section.querySelector('[data-play]').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause preview':'Play preview';clearInterval(timer);if(playing&&!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>{phase+=.15;draw()},100);draw()};
+draw();
+});
+})();
+</script>
+<style>
+html{color-scheme:dark;--screen-width:640px}html,body{margin:0;padding:0;background:#121518;color:#e9eee9;font:14px/1.5 ui-monospace,monospace}*{box-sizing:border-box}
+body{padding:20px 12px}section[hidden]{display:none!important}canvas{display:block!important;width:var(--screen-width)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;image-rendering:pixelated}
+body>div,.viz-carousel{padding:0!important;margin:0!important;background:transparent!important}
+[class$="-stage"],[class$="-product"]{padding:0!important;min-height:0!important;max-width:none!important;margin:0 auto!important;display:grid!important;justify-items:center!important;gap:16px!important}
+button{font:inherit!important;color:#e9eee9!important;background:#252c32!important;border:1px solid #48525b!important;border-radius:6px!important;padding:9px 12px!important;min-height:42px!important;cursor:pointer}button:hover{border-color:#c5f568!important}button:focus-visible{outline:2px solid #c5f568;outline-offset:3px}
+.wd-scale,[data-a="size"]{display:none!important}.wd-controls,.viz-controls,[class$="-actions"],[class$="-controls"]{display:flex!important;justify-content:center!important;gap:8px!important;flex-wrap:wrap!important;padding:0!important;margin:14px auto!important;max-width:680px!important}
+[class$="-note"],[class$="-caption"]{max-width:640px;margin:14px auto;color:#b0bcb9;font:12px/1.6 ui-monospace,monospace}
+</style>
+<script>
+(()=>{
+const variants=[...document.querySelectorAll('section[data-variant]')];
+variants.forEach((section,i)=>section.hidden=i!==2);
+function visible(button){return !button.closest('[hidden]')}
+function press(selectors){for(const selector of selectors){const button=[...document.querySelectorAll(selector)].find(visible);if(button){button.click();return true}}return false}
+function command(action){const actions={
+ play:['[data-action="play"]','[data-a="play"]','[data-a="pause"]','[data-play]','[data-act="play"]'],
+ menu:['[data-action="menu"]','[data-a="library"]','[data-view="menu"]','[data-act="themes"]'],
+ center:['[data-action="select"]','[data-act="select"]'],
+ up:['[data-action="up"]','[data-a="plus"]','[data-act="move"]'],
+ down:['[data-action="down"]','[data-a="minus"]','[data-act="move"]'],
+ previous:['[data-action="previous"]'],next:['[data-action="next"]','[data-a="track"]','[data-action="next"]'],
+ back:['[data-action="back"]'],forward:['[data-action="forward"]','[data-a="seek"]']};
+ return press(actions[action]||[])}
+function scale(value){document.documentElement.style.setProperty('--screen-width',(320*value)+'px')}
+window.addEventListener('message',e=>{if(e.source!==parent)return;if(location.protocol!=='file:'&&e.origin!==location.origin)return;if(e.data?.type==='prototype-scale')scale(e.data.scale===1?1:2);if(e.data?.type==='prototype-command')command(e.data.action)});
+window.addEventListener('keydown',e=>{if(e.target.matches('button,input,select,textarea'))return;const keys={' ':'play',ArrowUp:'up',ArrowDown:'down',ArrowLeft:'previous',ArrowRight:'next',Enter:'center',Escape:'menu'};if(keys[e.key]){e.preventDefault();command(keys[e.key])}});
+parent.postMessage({type:'prototype-ready'},location.protocol==='file:'?'*':location.origin);
+})();
+</script></body></html>

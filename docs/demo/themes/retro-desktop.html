@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retro Desktop — interactive concept</title><script>window.lucide={createIcons(){}};</script></head><body><div id="player-theme-study">
+ <div class="viz-carousel viz-dotted-background" aria-label="Player theme designs">
+  <section data-variant="Reel Deck"><div class="theme-stage"><div class="theme-player" data-initial="3" aria-label="Reel Deck theme"><canvas width="960" height="720" role="img" aria-label="Reel-to-reel music player with a rotating three-spoke reel during playback"></canvas><div class="theme-controls"><button type="button" data-act="play">Play preview</button><button type="button" data-act="themes">Themes</button><button type="button" data-act="move">Move selection</button><button type="button" data-act="select">Select / apply</button><button type="button" data-act="back">Back</button></div></div></div></section>
+  <section data-variant="Phosphor Deck" hidden><div class="theme-stage"><div class="theme-player" data-initial="0" aria-label="Phosphor Deck theme"><canvas width="960" height="720" role="img" aria-label="Player with a local interactive theme selection submenu"></canvas><div class="theme-controls"><button type="button" data-act="themes">Themes</button><button type="button" data-act="move">Move selection</button><button type="button" data-act="select">Select / apply</button><button type="button" data-act="back">Back</button></div></div></div></section>
+  <section data-variant="Retro Desktop" hidden><div class="theme-stage"><div class="theme-player" data-initial="1" aria-label="Retro Desktop theme"><canvas width="960" height="720" role="img" aria-label="Cream and charcoal pixel desktop player with theme selection"></canvas><div class="theme-controls"><button type="button" data-act="themes">Themes</button><button type="button" data-act="move">Move selection</button><button type="button" data-act="select">Select / apply</button><button type="button" data-act="back">Back</button></div></div></div></section>
+  <section data-variant="Lunar Terminal" hidden><div class="theme-stage"><div class="theme-player" data-initial="2" aria-label="Lunar Terminal theme"><canvas width="960" height="720" role="img" aria-label="One-bit space terminal player with a dithered moon and theme selection"></canvas><div class="theme-controls"><button type="button" data-act="themes">Themes</button><button type="button" data-act="move">Move selection</button><button type="button" data-act="select">Select / apply</button><button type="button" data-act="back">Back</button></div></div></div></section>
+ </div>
+</div>
+<style>
+#player-theme-study .theme-stage{display:flex;justify-content:center;align-items:center;min-height:550px;padding:24px 0 64px}
+#player-theme-study .theme-player{width:min(100%,640px);font-family:monospace}
+#player-theme-study canvas{display:block;width:100%;height:auto;background:#000;image-rendering:pixelated}
+#player-theme-study .theme-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding-top:16px}
+#player-theme-study button{font:500 12px monospace;background:#101713;color:#ddeddf;border:1px solid #3c5144;padding:10px 12px;border-radius:3px}
+@media(max-width:480px){#player-theme-study .theme-stage{min-height:390px}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('player-theme-study');
+const names=['Phosphor Deck','Retro Desktop','Lunar Terminal','Reel Deck'];
+const palettes=[{bg:'#000000',fg:'#e8fff0',dim:'#719584',accent:'#51ffab',panel:'#0b2017'},
+ {bg:'#e9e3c8',fg:'#2d3037',dim:'#59594d',accent:'#2d3037',panel:'#d4ceb5'},
+ {bg:'#0c0b13',fg:'#f0edff',dim:'#a5a1b8',accent:'#f0edff',panel:'#24212f'},
+ {bg:'#101010',fg:'#e3ece0',dim:'#9b9f98',accent:'#ff4b3b',panel:'#242424'}];
+root.querySelectorAll('.theme-player').forEach(player=>{
+ const c=player.querySelector('canvas').getContext('2d');let theme=+player.dataset.initial,selection=theme,menu=false;let angle=0,playing=false,lastAnimation=0;
+ const options={dither:true};let p=palettes[theme];
+ const text=(s,x,y,size=7,color=p.fg)=>{c.font='500 '+size+'px "Courier New",monospace';c.fillStyle=color;c.textBaseline='top';c.fillText(s,x,y)};
+ const rect=(x,y,w,h,col)=>{c.fillStyle=col;c.fillRect(x,y,w,h)};
+ const line=(x,y,x2,y2,col=p.dim)=>{c.strokeStyle=col;c.lineWidth=.7;c.beginPath();c.moveTo(x,y);c.lineTo(x2,y2);c.stroke()};
+ const box=(x,y,w,h)=>{c.strokeStyle=p.fg;c.lineWidth=1;c.strokeRect(x,y,w,h)};
+ const checker=(x,y,w,h)=>{for(let yy=0;yy<h;yy+=2)for(let xx=0;xx<w;xx+=2)if((xx+yy)%4===0)rect(x+xx,y+yy,2,2,p.fg)};
+ function hex(x,y,r,color){c.fillStyle=color;c.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;c.lineTo(x+Math.cos(a)*r,y+Math.sin(a)*r)}c.closePath();c.fill()}
+ function header(){
+  if(theme===1){box(5,5,310,230);checker(8,8,304,7);rect(8,19,304,13,p.fg);text(menu?'APPEARANCE':'PLAYER.EXE',14,21,8,p.bg);text('[X]',292,21,7,p.bg)}
+  else {text(menu?'SETTINGS / APPEARANCE':'NOW PLAYING',10,10,7,p.dim);text('SD / LOCAL',259,10,6,p.fg);line(10,25,310,25)}
+ }
+ function phosphor(){
+  text('MP3',10,34,6,p.accent);text('44.1 kHz / 320 kbps',47,34,6,p.dim);text('STEREO',282,34,6,p.accent);
+  text('GHOST IN THE CIRCUIT',10,51,14);text('MACHINE GIRL',10,72,8,p.accent);text('NEON ARCHIVE / VOL.03',10,87,6,p.dim);line(10,102,310,102,p.panel);
+  text('AUDIO FIELD',10,108,6,p.dim);text('L/R',145,108,6,p.accent);
+  for(let r=0;r<7;r++)for(let j=0;j<19;j++){let v=(Math.sin(j*.37)*Math.cos(r*.67)+1)/2;hex(14+j*7.8+(r%2)*3.9,122+r*5.8,3.5,v<.16?p.panel:'hsl('+(260-v*260)+' 100% '+(18+v*43)+'%)')}
+  line(177,109,177,168,p.panel);text('OUTPUT',189,109,6,p.dim);text('42',188,121,28);text('/100',231,140,7,p.dim);
+  for(let i=0;i<17;i++)rect(189+i*7,159,4,7,i<7?p.accent:p.panel);
+  text('01:42',10,177,17);text('/ 04:08',68,185,7,p.dim);text('SHUFFLE OFF',214,179,6,p.dim);text('REPEAT ALL',214,190,6,p.accent);rect(10,200,300,3,p.panel);rect(10,200,124,3,p.accent);
+ }
+ function desktop(){
+  box(14,42,292,64);rect(16,44,288,11,p.panel);text('TRACK 03 OF 18',22,46,7);text('Ghost in the Circuit',22,62,13);text('Machine Girl',22,82,9);text('MP3  44.1kHz  320kbps',164,89,6,p.dim);
+  box(14,114,186,61);checker(17,117,180,7);text('STEREO MONITOR',23,130,7);
+  for(let i=0;i<27;i++){const h=6+Math.abs(Math.sin(i*.37)*Math.cos(i*.19))*20;rect(23+i*6,165-h,3,h,p.fg)}
+  box(208,114,98,61);text('VOLUME',222,123,8);text('42',222,139,22);text('/100',262,153,7);
+  text('01:42 / 04:08',15,185,9);box(15,201,291,5);rect(17,203,119,1,p.fg);
+ }
+ function lunar(){
+  if(options.dither)for(let i=0;i<60;i++){let x=10+(i*83)%300,y=32+(i*47)%168;if(x<95||y>105)rect(x,y,1,1,p.dim)}
+  c.fillStyle=p.fg;c.beginPath();c.arc(49,78,29,0,Math.PI*2);c.fill();c.fillStyle=p.bg;c.beginPath();c.arc(60,72,26,0,Math.PI*2);c.fill();
+  if(options.dither)for(let y=50;y<106;y+=3)for(let x=20;x<78;x+=3)if(Math.hypot(x-49,y-78)<29&&(x+y)%2===0&&x<39)rect(x,y,1,1,p.bg);
+  text('GHOST IN',94,43,15);text('THE CIRCUIT',94,62,15);text('MACHINE GIRL',95,85,8,p.dim);text('MP3 / 44.1kHz',95,102,6,p.dim);
+  box(10,124,300,49);text('SIGNAL TRANSMISSION',18,130,6,p.dim);
+  for(let i=0;i<47;i++){let h=3+19*Math.abs(Math.sin(i*.3)*Math.cos(i*.11));rect(18+i*6,165-h,3,h,p.fg)}
+  text('01:42',10,183,18);text('/ 04:08',77,191,7,p.dim);text('VOL 42',260,185,10);line(10,207,310,207);rect(10,205,124,3,p.fg);
+ }
+ function reelDeck(){
+  // Mechanical reel rotates as one piece; spindle and transport remain fixed.
+  c.save();c.translate(88,123);c.rotate(angle);
+  c.fillStyle=p.fg;c.beginPath();c.arc(0,0,71,0,Math.PI*2);c.fill();
+  for(let i=0;i<3;i++){
+   c.save();c.rotate(i*Math.PI*2/3);
+   c.beginPath();c.moveTo(-13,-30);c.lineTo(-25,-52);c.quadraticCurveTo(-28,-59,-18,-62);
+   c.quadraticCurveTo(0,-68,18,-62);c.quadraticCurveTo(28,-59,25,-52);c.lineTo(13,-30);c.closePath();c.fillStyle=p.bg;c.fill();c.restore();
+  }
+  c.fillStyle=p.bg;c.beginPath();c.arc(0,0,19,0,Math.PI*2);c.fill();
+  for(let i=0;i<6;i++){let a=i*Math.PI/3;c.beginPath();c.arc(Math.cos(a)*24,Math.sin(a)*24,1.4,0,Math.PI*2);c.fill()}
+  text('SIDE A',-13,-45,6,p.bg);text('STEREO',-14,40,5,p.bg);text('03',-5,49,8,p.accent);
+  c.restore();
+  c.fillStyle=p.fg;c.beginPath();c.arc(88,123,5,0,Math.PI*2);c.fill();
+  c.fillStyle=p.bg;c.beginPath();c.arc(88,123,2,0,Math.PI*2);c.fill();
+  text('TRACK / 03',179,45,6,p.dim);text('GHOST IN',179,61,15,p.fg);text('THE CIRCUIT',179,80,15,p.fg);
+  text('MACHINE GIRL',180,104,8,p.accent);text('NEON ARCHIVE',180,119,6,p.dim);text('VOL.03 / MP3',180,130,6,p.dim);
+  line(180,147,309,147,p.panel);text('OUTPUT',180,158,6,p.dim);text('42',179,169,22,p.fg);text('/100',210,180,6,p.dim);
+  text('01:42',258,165,11,p.fg);text('/ 04:08',264,181,6,p.dim);
+  rect(12,202,296,2,p.panel);rect(12,202,122,2,p.accent);line(12,214,308,214,p.panel);
+ }
+ function draw(){
+  p=palettes[theme];c.setTransform(3,0,0,3,0,0);rect(0,0,320,240,p.bg);header();
+  if(menu){
+   let top=theme===1?42:38;text('THEMES',15,top,13);text('Choose a look. Keep your music.',15,top+21,7,p.dim);
+   names.forEach((n,i)=>{let y=top+40+i*28;let active=i===selection;
+    if(active){rect(12,y-3,296,28,p.fg);text('> '+n,20,y+4,11,p.bg);if(i===theme)text('*',286,y+5,10,p.bg)}
+    else {text(n,25,y+4,11,p.dim);if(i===theme)text('*',286,y+5,10,p.accent)}
+   });text('* CURRENT THEME',15,top+157,6,p.dim);
+   line(12,214,308,214);text('LEFT: BACK',15,222,6,p.dim);text('CENTER: APPLY',224,222,6,p.fg);
+  }else{
+   if(theme===0)phosphor();else if(theme===1)desktop();else if(theme===2)lunar();else reelDeck();
+   let fy=theme===1?221:224;text('PREV',15,fy,6,p.dim);text(playing?'|| PLAYING':'> PAUSED',66,fy,7,p.accent);text('Q 03/18',182,fy,6,p.dim);text('HOLD:MENU',257,fy,6,p.dim);
+  }
+ }
+ player.querySelector('[data-act="themes"]').onclick=()=>{selection=theme;menu=true;draw()};
+ player.querySelector('[data-act="move"]').onclick=()=>{if(!menu){selection=theme;menu=true}else selection=(selection+1)%names.length;draw()};
+ player.querySelector('[data-act="select"]').onclick=()=>{if(menu){theme=selection;menu=false;draw()}};
+ player.querySelector('[data-act="back"]').onclick=()=>{menu=false;selection=theme;draw()};
+ const playButton=player.querySelector('[data-act="play"]');
+ function animate(t){
+  if(!playing){lastAnimation=0;return;}
+  if(!lastAnimation)lastAnimation=t;
+  const dt=Math.min(100,t-lastAnimation);
+  if(dt>=50){
+   if(theme===3&&!menu&&!matchMedia('(prefers-reduced-motion: reduce)').matches){angle+=dt*.00065;draw();}
+   lastAnimation=t;
+  }
+  requestAnimationFrame(animate);
+ }
+ if(playButton)playButton.onclick=()=>{
+  playing=!playing;playButton.textContent=playing?'Pause preview':'Play preview';draw();
+  if(playing)requestAnimationFrame(animate);
+ };
+ draw();
+ if(globalThis.Tweak){const t=new Tweak({container:player,onChange:draw});t.addToggle(options,'dither',{label:'Lunar dither texture'});}
+});
+})();
+</script>
+
+<style>
+html{color-scheme:dark;--screen-width:640px}html,body{margin:0;padding:0;background:#121518;color:#e9eee9;font:14px/1.5 ui-monospace,monospace}*{box-sizing:border-box}
+body{padding:20px 12px}section[hidden]{display:none!important}canvas{display:block!important;width:var(--screen-width)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;image-rendering:pixelated}
+body>div,.viz-carousel{padding:0!important;margin:0!important;background:transparent!important}
+[class$="-stage"],[class$="-product"]{padding:0!important;min-height:0!important;max-width:none!important;margin:0 auto!important;display:grid!important;justify-items:center!important;gap:16px!important}
+button{font:inherit!important;color:#e9eee9!important;background:#252c32!important;border:1px solid #48525b!important;border-radius:6px!important;padding:9px 12px!important;min-height:42px!important;cursor:pointer}button:hover{border-color:#c5f568!important}button:focus-visible{outline:2px solid #c5f568;outline-offset:3px}
+.wd-scale,[data-a="size"]{display:none!important}.wd-controls,.viz-controls,[class$="-actions"],[class$="-controls"]{display:flex!important;justify-content:center!important;gap:8px!important;flex-wrap:wrap!important;padding:0!important;margin:14px auto!important;max-width:680px!important}
+[class$="-note"],[class$="-caption"]{max-width:640px;margin:14px auto;color:#b0bcb9;font:12px/1.6 ui-monospace,monospace}
+</style>
+<script>
+(()=>{
+const variants=[...document.querySelectorAll('section[data-variant]')];
+variants.forEach((section,i)=>section.hidden=i!==2);
+function visible(button){return !button.closest('[hidden]')}
+function press(selectors){for(const selector of selectors){const button=[...document.querySelectorAll(selector)].find(visible);if(button){button.click();return true}}return false}
+function command(action){const actions={
+ play:['[data-action="play"]','[data-a="play"]','[data-a="pause"]','[data-play]','[data-act="play"]'],
+ menu:['[data-action="menu"]','[data-a="library"]','[data-view="menu"]','[data-act="themes"]'],
+ center:['[data-action="select"]','[data-act="select"]'],
+ up:['[data-action="up"]','[data-a="plus"]','[data-act="move"]'],
+ down:['[data-action="down"]','[data-a="minus"]','[data-act="move"]'],
+ previous:['[data-action="previous"]'],next:['[data-action="next"]','[data-a="track"]','[data-action="next"]'],
+ back:['[data-action="back"]'],forward:['[data-action="forward"]','[data-a="seek"]']};
+ return press(actions[action]||[])}
+function scale(value){document.documentElement.style.setProperty('--screen-width',(320*value)+'px')}
+window.addEventListener('message',e=>{if(e.source!==parent)return;if(location.protocol!=='file:'&&e.origin!==location.origin)return;if(e.data?.type==='prototype-scale')scale(e.data.scale===1?1:2);if(e.data?.type==='prototype-command')command(e.data.action)});
+window.addEventListener('keydown',e=>{if(e.target.matches('button,input,select,textarea'))return;const keys={' ':'play',ArrowUp:'up',ArrowDown:'down',ArrowLeft:'previous',ArrowRight:'next',Enter:'center',Escape:'menu'};if(keys[e.key]){e.preventDefault();command(keys[e.key])}});
+parent.postMessage({type:'prototype-ready'},location.protocol==='file:'?'*':location.origin);
+})();
+</script></body></html>

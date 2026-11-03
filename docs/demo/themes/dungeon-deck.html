@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dungeon Deck — interactive concept</title><script>window.lucide={createIcons(){}};</script></head><body><div id="pixel-scene-directions" class="viz-carousel viz-dotted-background" aria-label="Pixel game music player directions">
+ <section data-variant="Woodland Radio"><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Woodland Radio with a monochrome forest, cabin and headphone listener"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+ <section data-variant="Dungeon Deck" hidden><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Dungeon Deck with ornate monochrome inventory frames"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+ <section data-variant="Amber Navigator" hidden><div class="pg-stage"><canvas width="320" height="240" role="img" aria-label="Amber Navigator with orange instrument panels"></canvas><div class="pg-actions"><button type="button" data-view="player" class="cursor-interaction">Player</button><button type="button" data-view="menu" class="cursor-interaction">Library</button><button type="button" data-play class="cursor-interaction">Play preview</button></div></div></section>
+</div>
+<style>
+#pixel-scene-directions .pg-stage{padding:24px 10px;display:grid;justify-items:center;gap:18px;min-height:370px}
+#pixel-scene-directions canvas{width:640px;max-width:100%;height:auto;display:block;image-rendering:pixelated}
+#pixel-scene-directions .pg-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+#pixel-scene-directions button{font:14px monospace;padding:10px 14px;min-height:44px;background:#252039;color:#fff1e8;border:2px solid #83769c}
+#pixel-scene-directions button[aria-pressed=true]{background:#fff1e8;color:#252039}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('pixel-scene-directions');
+const glyphs={A:['01110','10001','10001','11111','10001','10001','10001'],B:['11110','10001','10001','11110','10001','10001','11110'],C:['01111','10000','10000','10000','10000','10000','01111'],D:['11110','10001','10001','10001','10001','10001','11110'],E:['11111','10000','10000','11110','10000','10000','11111'],F:['11111','10000','10000','11110','10000','10000','10000'],G:['01111','10000','10000','10111','10001','10001','01111'],H:['10001','10001','10001','11111','10001','10001','10001'],I:['111','010','010','010','010','010','111'],J:['00111','00010','00010','00010','10010','10010','01100'],K:['10001','10010','10100','11000','10100','10010','10001'],L:['10000','10000','10000','10000','10000','10000','11111'],M:['10001','11011','10101','10101','10001','10001','10001'],N:['10001','11001','10101','10011','10001','10001','10001'],O:['01110','10001','10001','10001','10001','10001','01110'],P:['11110','10001','10001','11110','10000','10000','10000'],Q:['01110','10001','10001','10001','10101','10010','01101'],R:['11110','10001','10001','11110','10100','10010','10001'],S:['01111','10000','10000','01110','00001','00001','11110'],T:['11111','00100','00100','00100','00100','00100','00100'],U:['10001','10001','10001','10001','10001','10001','01110'],V:['10001','10001','10001','10001','10001','01010','00100'],W:['10001','10001','10001','10101','10101','10101','01010'],X:['10001','10001','01010','00100','01010','10001','10001'],Y:['10001','10001','01010','00100','00100','00100','00100'],Z:['11111','00001','00010','00100','01000','10000','11111'],0:['01110','10001','10011','10101','11001','10001','01110'],1:['010','110','010','010','010','010','111'],2:['01110','10001','00001','00010','00100','01000','11111'],3:['11110','00001','00001','01110','00001','00001','11110'],4:['10010','10010','10010','11111','00010','00010','00010'],5:['11111','10000','10000','11110','00001','00001','11110'],6:['01110','10000','10000','11110','10001','10001','01110'],7:['11111','00001','00010','00100','01000','01000','01000'],8:['01110','10001','10001','01110','10001','10001','01110'],9:['01110','10001','10001','01111','00001','00001','01110'],':':['0','1','1','0','1','1','0'],'/':['00001','00001','00010','00100','01000','10000','10000'],'.':['0','0','0','0','0','1','1'],'-':['000','000','000','111','000','000','000'],'+':['000','010','010','111','010','010','000']};
+root.querySelectorAll('section').forEach((section,variant)=>{
+const canvas=section.querySelector('canvas'),ctx=canvas.getContext('2d');let view='player',playing=false,phase=0,timer=null;
+const cream='#fff1d2',gold='#ffbd53',plum='#211b34',lav='#9b82c4',ink='#34263e',pink='#e86a8c',mint='#83d9b0';
+function r(a,b,w,h,col){ctx.fillStyle=col;ctx.fillRect(Math.round(a),Math.round(b),w,h)}
+function t(s,a,b,col,z=1){for(const ch of s.toUpperCase()){const g=glyphs[ch];if(!g){a+=4*z;continue}g.forEach((row,j)=>[...row].forEach((p,i)=>{if(p==='1')r(a+i*z,b+j*z,z,z,col)}));a+=(g[0].length+1)*z}}
+function box(a,b,w,h,col,bg){r(a,b,w,h,bg);r(a,b,w,2,col);r(a,b+h-2,w,2,col);r(a,b,2,h,col);r(a+w-2,b,2,h,col)}
+function dots(a,b,w,h,col,step=4){for(let yy=b;yy<b+h;yy+=step)for(let xx=a+(yy%8?0:2);xx<a+w;xx+=step)r(xx,yy,1,1,col)}
+function disc(cx,cy,rad,col){for(let yy=-rad;yy<=rad;yy++){let w=Math.floor(Math.sqrt(rad*rad-yy*yy));r(cx-w,cy+yy,w*2+1,1,col)}}
+function dial(cx,cy,value,col){disc(cx+1,cy+2,14,ink);disc(cx,cy,13,cream);disc(cx,cy,10,col);const a=-2.4+value*4.8;r(cx+Math.sin(a)*7-1,cy-Math.cos(a)*7-1,3,3,ink);r(cx-1,cy-1,3,3,ink)}
+function row(s,y,selected){if(selected)r(24,y-3,272,22,cream);t(s,34,y+2,selected?plum:gold,2)}
+function windowBox(a,b,w,h,title){r(a+3,b+3,w,h,ink);box(a,b,w,h,ink,cream);r(a+3,b+3,w-6,13,'#b6d5e9');t(title,a+8,b+6,ink);r(a+4,b+17,w-8,1,ink);box(a+w-15,b+5,9,9,ink,cream)}
+function draw(){
+const bg=variant===2?'#100d08':'#10151b',fg=variant===2?'#f58b08':'#f4efdc';
+function tree(a,b,size=1){const s=size; r(a+10*s,b+20*s,4*s,13*s,fg);for(let j=0;j<4;j++){const yy=b+j*5*s,ww=(5+j*5)*s;r(a+12*s-ww/2,yy,ww,4*s,fg);r(a+12*s-ww/2+2*s,yy+3*s,ww-4*s,2*s,fg)}r(a+9*s,b+19*s,3*s,6*s,bg)}
+function bush(a,b){[[0,4],[6,0],[13,3],[19,8],[4,11],[12,13]].forEach(([xx,yy])=>{r(a+xx,b+yy,9,7,fg);r(a+xx+2,b+yy-2,5,2,fg);r(a+xx+2,b+yy+2,2,2,bg)});r(a+7,b+18,13,2,fg)}
+function frame(a,b,w,h){box(a,b,w,h,fg,bg);r(a+3,b+3,w-6,1,fg);r(a+3,b+h-4,w-6,1,fg);[[a,b],[a+w-8,b],[a,b+h-8],[a+w-8,b+h-8]].forEach(([xx,yy])=>{r(xx,yy,8,8,fg);r(xx+2,yy+2,4,4,bg)})}
+function heart(a,b,col){['0110110','1111111','1111111','0111110','0011100','0001000'].forEach((row,j)=>[...row].forEach((p,i)=>{if(p==='1')r(a+i*2,b+j*2,2,2,col)}))}
+function ship(a,b){r(a+8,b,19,4,fg);r(a+5,b+4,27,4,fg);r(a,b+8,37,5,fg);r(a+5,b+13,27,3,fg);r(a+10,b+16,17,4,fg);r(a+12,b+5,4,3,bg);r(a+22,b+5,4,3,bg)}
+function footer(){r(0,220,320,20,fg);t('LEFT BACK',10,227,bg);t('PRESS SELECT',236,227,bg)}
+r(0,0,320,240,bg);
+if(variant===0){
+// A complete little listening scene; the environment is the identity of the theme.
+r(0,0,320,17,fg);t('WOODLAND RADIO',9,5,bg);t('08 / 120',256,5,bg);
+for(let a=0;a<320;a+=23){tree(a-5,20,(a%3===0)?1.4:1);bush(a,62)}
+r(14,84,292,71,fg);dots(15,85,290,69,bg,7);
+// A meandering white path through dark woods.
+r(142,46,29,96,fg);r(122,109,44,46,fg);r(96,137,55,18,fg);
+// Cabin and its stepped roof.
+for(let j=0;j<10;j++)r(37-j*3,67+j*2,20+j*6,2,fg);
+box(24,87,48,42,bg,fg);for(let yy=92;yy<128;yy+=7)r(27,yy,42,1,bg);box(42,104,13,25,bg,bg);box(29,96,9,11,bg,fg);box(59,96,9,11,bg,fg);r(46,115,2,2,fg);
+// Bench, radio and listener with headphones.
+r(214,113,62,5,bg);r(219,118,4,12,bg);r(267,118,4,12,bg);box(246,97,22,14,bg,fg);r(249,101,9,6,bg);r(262,101,3,3,bg);r(250,87,1,10,bg);
+disc(189,108,7,bg);r(181,103,16,3,bg);r(180,106,3,7,bg);r(195,106,3,7,bg);r(184,116,12,13,bg);r(182,127,5,8,bg);r(193,127,5,8,bg);
+if(playing){t('+',271,90,bg);t('+',283,78,bg)}
+for(let a=0;a<320;a+=31){bush(a-4,137);tree(a+1,110,.8)}
+frame(8,164,304,49);t(view==='player'?'NIGHT DRIVE':'YOUR MUSIC',20,175,fg,2);t(view==='player'?'NEON DISTRICT':'ALL SONGS / ARTISTS / ALBUMS',20,196,fg);
+r(10,222,300,3,'#414849');r(10,222,123,3,fg);t(playing?'PLAYING':'PAUSED',10,232,fg);t('1:42 / 4:08',116,232,fg);t('VOL 42',274,232,fg);
+if(view==='menu'){frame(72,42,236,114);['ALL SONGS','ARTISTS','ALBUMS','FOLDERS'].forEach((s,i)=>{if(i===0)r(80,51+i*25,220,21,fg);t(s,91,55+i*25,i===0?bg:fg,2)})}
+}else if(variant===1){
+frame(7,7,306,39);heart(19,18,fg);t('42',39,18,fg,2);t('VOL',76,23,fg);t('08 / 120',193,18,fg,2);
+// Architectural inventory frame, not a generic rounded card.
+for(let a=8;a<312;a+=16){box(a,54,14,10,fg,bg);r(a+3,57,3,2,fg)}
+frame(8,69,304,109);
+if(view==='player'){
+t('NIGHT DRIVE',22,83,fg,2);t('NEON DISTRICT',23,106,fg);
+// Low-resolution fantasy transport: a tape cartridge in an inventory slot.
+box(22,124,57,40,fg,bg);box(28,129,45,19,fg,bg);[39,62].forEach(cx=>{disc(cx,139,6,fg);disc(cx,139,3,bg);r(cx+Math.cos(phase)*4,139+Math.sin(phase)*4,1,1,bg)});r(36,155,27,5,fg);
+t('1:42',99,130,fg,3);t('/ 4:08',218,149,fg);t(playing?'PLAYING':'PAUSED',100,158,fg);
+}else{['ALL SONGS','ARTISTS','ALBUMS'].forEach((s,i)=>{if(i===0)r(17,78+i*29,286,24,fg);t(s,28,83+i*29,i===0?bg:fg,2)})}
+frame(8,185,304,27);for(let a=16;a<304;a+=8)r(a,194,5,9,a<136?fg:'#31363a');r(134,191,3,15,fg);
+t('LEFT BACK',13,228,fg);t('HOLD LIBRARY',231,228,fg);
+}else{
+// Two-tone marine-instrument screen, with oversized navigation tiles.
+box(4,4,312,232,fg,bg);r(9,9,302,25,fg);t('DECK / LOCAL AUDIO',16,18,bg);t('08',285,18,bg);
+if(view==='player'){
+box(10,41,300,65,fg,bg);t('NIGHT DRIVE',19,53,fg,2);t('NEON DISTRICT',20,78,fg);t('MP3',279,89,fg);
+r(10,113,184,83,fg);t('1:42',23,128,bg,4);t('/ 4:08',26,169,bg,2);
+box(201,113,109,83,fg,bg);ship(237,125);t(playing?'PLAYING':'PAUSED',220,153,fg);t('VOL 42',220,175,fg,2);
+for(let a=14;a<308;a+=6)r(a,202,4,7,a<136?fg:'#3a2510');
+}else{[['SONGS',10,41],['ARTISTS',163,41],['ALBUMS',10,126],['SETUP',163,126]].forEach(([s,a,b],i)=>{box(a,b,147,78,fg,i===0?fg:bg);t(s,a+10,b+13,i===0?bg:fg,2);if(i===0){r(a+20,b+42,35,16,bg);r(a+25,b+38,12,4,bg)}else if(i===1){disc(a+105,b+50,12,fg);disc(a+105,b+50,5,bg)}else if(i===2){box(a+93,b+35,34,27,fg,bg);box(a+99,b+41,22,15,fg,bg)}else{r(a+95,b+35,8,29,fg);r(a+85,b+46,28,8,fg)}})}
+r(10,218,300,12,fg);t('LEFT BACK',16,221,bg);t('PRESS SELECT',236,221,bg);
+}
+}
+
+section.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;section.querySelectorAll('[data-view]').forEach(q=>q.setAttribute('aria-pressed',String(q===b)));draw()});
+section.querySelector('[data-play]').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause preview':'Play preview';clearInterval(timer);if(playing&&!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>{phase+=.15;draw()},100);draw()};
+draw();
+});
+})();
+</script>
+<style>
+html{color-scheme:dark;--screen-width:640px}html,body{margin:0;padding:0;background:#121518;color:#e9eee9;font:14px/1.5 ui-monospace,monospace}*{box-sizing:border-box}
+body{padding:20px 12px}section[hidden]{display:none!important}canvas{display:block!important;width:var(--screen-width)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;image-rendering:pixelated}
+body>div,.viz-carousel{padding:0!important;margin:0!important;background:transparent!important}
+[class$="-stage"],[class$="-product"]{padding:0!important;min-height:0!important;max-width:none!important;margin:0 auto!important;display:grid!important;justify-items:center!important;gap:16px!important}
+button{font:inherit!important;color:#e9eee9!important;background:#252c32!important;border:1px solid #48525b!important;border-radius:6px!important;padding:9px 12px!important;min-height:42px!important;cursor:pointer}button:hover{border-color:#c5f568!important}button:focus-visible{outline:2px solid #c5f568;outline-offset:3px}
+.wd-scale,[data-a="size"]{display:none!important}.wd-controls,.viz-controls,[class$="-actions"],[class$="-controls"]{display:flex!important;justify-content:center!important;gap:8px!important;flex-wrap:wrap!important;padding:0!important;margin:14px auto!important;max-width:680px!important}
+[class$="-note"],[class$="-caption"]{max-width:640px;margin:14px auto;color:#b0bcb9;font:12px/1.6 ui-monospace,monospace}
+</style>
+<script>
+(()=>{
+const variants=[...document.querySelectorAll('section[data-variant]')];
+variants.forEach((section,i)=>section.hidden=i!==1);
+function visible(button){return !button.closest('[hidden]')}
+function press(selectors){for(const selector of selectors){const button=[...document.querySelectorAll(selector)].find(visible);if(button){button.click();return true}}return false}
+function command(action){const actions={
+ play:['[data-action="play"]','[data-a="play"]','[data-a="pause"]','[data-play]','[data-act="play"]'],
+ menu:['[data-action="menu"]','[data-a="library"]','[data-view="menu"]','[data-act="themes"]'],
+ center:['[data-action="select"]','[data-act="select"]'],
+ up:['[data-action="up"]','[data-a="plus"]','[data-act="move"]'],
+ down:['[data-action="down"]','[data-a="minus"]','[data-act="move"]'],
+ previous:['[data-action="previous"]'],next:['[data-action="next"]','[data-a="track"]','[data-action="next"]'],
+ back:['[data-action="back"]'],forward:['[data-action="forward"]','[data-a="seek"]']};
+ return press(actions[action]||[])}
+function scale(value){document.documentElement.style.setProperty('--screen-width',(320*value)+'px')}
+window.addEventListener('message',e=>{if(e.source!==parent)return;if(location.protocol!=='file:'&&e.origin!==location.origin)return;if(e.data?.type==='prototype-scale')scale(e.data.scale===1?1:2);if(e.data?.type==='prototype-command')command(e.data.action)});
+window.addEventListener('keydown',e=>{if(e.target.matches('button,input,select,textarea'))return;const keys={' ':'play',ArrowUp:'up',ArrowDown:'down',ArrowLeft:'previous',ArrowRight:'next',Enter:'center',Escape:'menu'};if(keys[e.key]){e.preventDefault();command(keys[e.key])}});
+parent.postMessage({type:'prototype-ready'},location.protocol==='file:'?'*':location.origin);
+})();
+</script></body></html>

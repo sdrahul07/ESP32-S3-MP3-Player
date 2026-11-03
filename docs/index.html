@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Try the 20 UI concepts from the ESP32-S3 MP3 player prototype, with interactive playback and library previews.">
+  <title>ES32-S3 MP3 Player · Interactive UI</title>
+  <link rel="stylesheet" href="demo/site.css">
+  <script src="demo/site.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="#neon-fishbone">ES32-S3 <span>/ MP3 PLAYER</span></a>
+    <a class="repo-link" href="https://github.com/sdrahul07/ES32-S3-MP3-Player">Source & wiring ↗</a>
+  </header>
+  <main>
+    <div class="intro">
+      <p class="eyebrow">THE MODULE PROTOTYPE / UI ARCHIVE</p>
+      <h1>A pocket player. Twenty personalities.</h1>
+      <p>Try the original interactive concepts, then compare them with the archived firmware renders.</p>
+    </div>
+    <div class="workspace">
+      <aside aria-label="Theme selection">
+        <div class="list-heading"><h2>Themes</h2><span>20</span></div>
+        <label class="sr-only" for="theme-search">Find a theme</label>
+        <input id="theme-search" type="search" placeholder="Find a theme…" autocomplete="off">
+        <nav id="theme-list" aria-label="Available themes"><p>Loading themes…</p></nav>
+      </aside>
+      <section class="preview" aria-labelledby="theme-title">
+        <div class="preview-heading"><div><p class="eyebrow" id="theme-number">01 / 20</p><h2 id="theme-title">Neon Fishbone</h2></div><div class="stepper"><button id="previous-theme" aria-label="Previous theme">←</button><button id="next-theme" aria-label="Next theme">→</button></div></div>
+        <div class="toolbar">
+          <div class="view-switch" role="group" aria-label="Preview type"><button data-view="interactive" aria-pressed="true">Interactive concept</button><button data-view="firmware" aria-pressed="false">Firmware renders</button></div>
+          <label>Pixels <select id="scale" aria-label="Preview scale"><option value="2">2×</option><option value="1">1× actual pixels</option></select></label>
+        </div>
+        <div id="interactive-view">
+          <iframe id="preview-frame" title="Neon Fishbone interactive UI" src="demo/themes/neon-fishbone.html"></iframe>
+          <p id="control-hint" class="hint">Playback, songs, library, volume and seek</p>
+        </div>
+        <div id="firmware-view" hidden>
+          <div class="render-tabs" role="group" aria-label="Firmware screen"><button data-screen="player" aria-pressed="true">Now playing</button><button data-screen="menu" aria-pressed="false">Library</button><button data-screen="settings" aria-pressed="false">Settings</button><button data-screen="brightness" aria-pressed="false">Brightness</button></div>
+          <div class="render-stage"><img id="firmware-image" src="previews/now-playing/01-Neon-Fishbone.png" width="320" height="240" alt="Neon Fishbone actual firmware renderer output"></div>
+          <p class="hint">Static 320 × 240 output from the saved C++ firmware renderer. Use the interactive tab to try the earlier concept.</p>
+        </div>
+        <div class="details"><span><i></i>320 × 240 landscape display</span><button id="copy-link">Copy theme link</button><span id="status" role="status" aria-live="polite"></span></div>
+      </section>
+    </div>
+    <section class="notes" aria-label="About the demo">
+      <div><h2>Try it</h2><p>Pick a theme and use the buttons below its screen. Illustrated themes let you select sample songs, play/pause, seek and adjust volume. Other concepts have their own preview controls.</p><p>Keyboard shortcuts where supported: <kbd>Space</kbd> play, <kbd>↑</kbd> / <kbd>↓</kbd> wheel, <kbd>←</kbd> / <kbd>→</kbd> tracks, <kbd>Enter</kbd> center, <kbd>Esc</kbd> library.</p></div>
+      <div><h2>What this preview represents</h2><p>These are the original HTML design concepts, not an ESP32 emulator. Sample tracks and signal animations are simulated; no music plays. The firmware tab shows the later implementation, including its menus. Controls, typography and animation can differ.</p><p>Hardware brightness, display calibration and decoded-audio analysis remain in the archived firmware. This demo does not change or flash a device.</p></div>
+    </section>
+    <noscript><p class="error">Enable JavaScript for the gallery, or open <a href="demo/themes/neon-fishbone.html">an individual HTML preview</a> / browse the <a href="https://github.com/sdrahul07/ES32-S3-MP3-Player/tree/main/docs/previews">firmware images</a>.</p></noscript>
+  </main>
+  <footer>Preserved prototype / built from off-the-shelf modules <a href="https://github.com/sdrahul07/ES32-S3-MP3-Player/tree/prototype-baseline">Frozen firmware baseline ↗</a></footer>
+</body>
+</html>
